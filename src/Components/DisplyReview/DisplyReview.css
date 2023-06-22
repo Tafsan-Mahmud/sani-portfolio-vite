@@ -1,0 +1,136 @@
+#itsLightmode .main-card-rvw{
+    background: #d8dbe6;
+}
+
+.main-card-rvw{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #040e19;
+    padding: 15px;
+}
+.img-name-tittle img{
+    max-width: 75px;
+    border-radius: 100%;
+    margin-right: 10px;
+    /* box-shadow: 5px 5px 10px gray; */
+}
+
+.nm-ttl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#itsLightmode #reviwerCountry{
+    color:#676767;
+}
+#itsLightmode #reviwerCountry span{
+    color:#c25e00 ;
+}
+#reviwerCountry{
+    color:#a3a3a3;
+}
+#reviwerCountry span{
+    color:#c25e00 ;
+}
+#itsLightmode .nm-ttl h5{
+    color: #090b13;
+}
+.nm-ttl h5{
+    letter-spacing: .3px;
+    /* padding-top: 30px; */
+    color: #e0e0e0;
+}
+#itsLightmode .nm-ttl span{
+    color: #0d0d0e;
+}
+.nm-ttl span{
+    letter-spacing: .3px;
+    color: #c9c9c9;
+}
+#itsLightmode .Star-Rate h4{
+    color: #e0cc04;
+}
+.Star-Rate h4{
+    color: #fbe402;
+}
+#itsLightmode .star-disable{
+    color: #b5b5b5dc;
+}
+.star-disable{
+    color: #838383dc;
+}
+#itsLightmode .main-card-rvw .user-comment{
+    color: #111111;
+}
+.main-card-rvw .user-comment{
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    color: #d4d4d4;
+    transition:2s;
+}
+.active-height .user-comment{
+    height: auto;
+}
+#itsLightmode .user-comment::before{
+    background: linear-gradient(transparent,#d8dbe6);
+}
+.user-comment::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent,#040e19);
+}
+.active-height .user-comment::before{
+    display: none;
+}
+.main-card-rvw::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #e05a00;
+    border-right: 20px solid #e05a00;
+}
+.main-card-rvw .see-more-rvw{
+    position: relative;
+    padding: 2px 1px;
+    border-bottom: 1px solid #c90000;
+    background: transparent;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+.main-card-rvw .see-more-rvw::before{
+    content: 'Read More';
+    color: #c90000;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.active-height .see-more-rvw::before{
+    content: 'Read Less';
+    color: #059f0b;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.active-height .see-more-rvw{
+    background: transparent;
+    border-bottom: 1px solid #059f0b;
+
+    
+}
+.active-height::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #059f0b;
+    border-right: 20px solid #059f0b;
+}

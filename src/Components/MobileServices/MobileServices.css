@@ -1,0 +1,123 @@
+ #lightOn #MobileServices{
+    background: #c4c8d1;
+ }
+
+
+#MobileServices{
+    height: 100%;
+    width: 100%;
+    background: #02040b;
+    display: flex;
+    justify-content: center;
+}
+#lightOn .text-mobile-service h1{
+    color: #090b13;
+}
+
+.text-mobile-service h1{
+    color: #e2e2e2;
+    letter-spacing: 1px;
+}
+#lightOn .text-mobile-service p{
+    color: #111112;
+}
+.text-mobile-service p{
+    font-size: 19px;
+    color: #c2c2c2;
+    letter-spacing: .5px;
+}
+
+#lightOn .card-mobile-srvc1{
+    background: #cfdeea;
+    box-shadow: 8px 8px 30px #04040487;
+}
+.card-mobile-srvc1{
+    height: 210px;
+    width: 310px;
+    border-left: 4px solid #e05a00;
+    background: #090b13;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: 10px 0;
+    box-shadow: 10px 10px 30px rgba(4, 4, 4, 0.891);
+}
+#lightOn .card-mobile-srvc1 h3{
+    color: #090b13;
+}
+.card-mobile-srvc1 h3{
+    color: #d5d3d1;
+}
+#lightOn .card-mobile-srvc1 p{
+    color: #0b0b0b;
+}
+.card-mobile-srvc1 p{
+    color: #b0b0b0;
+}
+.card-mobile-srvc1 h1{
+    color: #e05a00;
+}
+.card-mobile-srvc2 h1{
+    color: #00be0a;
+}
+#lightOn .card-mobile-srvc2{
+    background: #cfdeea;
+    box-shadow: 8px 8px 30px #04040487;
+}
+.card-mobile-srvc2{
+    height: 210px;
+    width: 310px;
+    border-left: 4px solid #00be0a;
+    background: #090b13;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: 10px 0;
+    box-shadow: 10px 10px 30px rgba(4, 4, 4, 0.891);
+}
+#lightOn .card-mobile-srvc2 h3{
+    color: #090b13;
+}
+.card-mobile-srvc2 h3{
+    color: #d5d3d1;
+}
+#lightOn .card-mobile-srvc2 p{
+    color: #0b0b0b;
+}
+.card-mobile-srvc2 p{
+    color: #b0b0b0;
+}
+.mobile-service-img-main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mbl-svc-img{
+    width:80%;
+}
+.mobile-btn{
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background: #d45500;
+    color: whitesmoke;
+    padding: 10px 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition:0.5s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 8px 8px 30px #0404047b;
+}
+.mobile-btn:hover{
+    letter-spacing: 1.8px;
+}
+@media(max-width: 360px){
+    #MobileServices{
+        height: 100%;
+    }
+    .mbl-svc-img{
+        width:90%;
+    }
+}

@@ -1,0 +1,28 @@
+#itsLight .full-service-page{
+    background: #cad9e2;
+}
+
+.full-service-page{
+    background: #090b13;
+}
+
+#itsLight .srvc-top-text-padding h1{
+    color: #090b13;
+}
+.srvc-top-text-padding h1{
+    color: #d8d8d8;
+    font-weight: 700;
+    font-size: 40px;
+}
+#itsLight .srvc-top-text-padding p{
+    color: #131316;
+}
+.srvc-top-text-padding p{
+    color: #c4c4c4;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+.srvc-top-text-padding{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,120 @@
+.myBookingCarrd {
+    width: 290px;
+    min-height: 450px;
+    background: #0a1520;
+    margin: 15px;
+    padding: 20px;
+}
+
+.img-tttl-myBkng {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrp-m-bkng .img-tttl-myBkng img {
+    width: 55px;
+    margin-right: 5px;
+}
+
+/* booking status buttoncolour */
+
+
+#disply-my-booking-list #Pending {
+    background: #a80046;
+    transition: 0.2s;
+    outline: none;
+    border: none;
+    width: 102px;
+    padding: 7px 8px;
+    color: #f0f8ff;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+#disply-my-booking-list #On-Going {
+    background: #aa9f00;
+    transition: 0.2s;
+    outline: none;
+    border: none;
+    width: 102px;
+    padding: 7px 8px;
+    color: #f0f8ff;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#disply-my-booking-list #Done {
+    background: #009225;
+    transition: 0.2s;
+    outline: none;
+    border: none;
+    width: 102px;
+    padding: 7px 8px;
+    color: #f0f8ff;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* booking status buttoncolour */
+
+
+#m-bkng-h1 {
+    position: relative;
+    color: #cecece;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+#m-bkng-h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 2px;
+    height: 100%;
+    background-color: tomato;
+}
+
+#m-bkng-p1 {
+    color: #c1c1c1;
+    letter-spacing: .3px;
+}
+
+.wrp-bkng-topic {
+    position: relative;
+}
+
+.wrp-bkng-topic p {
+    color: #9e9e9e;
+}
+
+@media screen and (max-width: 370px) {
+    .myBookingCarrd {
+        width: 100%;
+    }
+
+    .wrp-m-bkng .img-tttl-myBkng img {
+        width: 45px;
+        margin-right: 5px;
+    }
+
+}

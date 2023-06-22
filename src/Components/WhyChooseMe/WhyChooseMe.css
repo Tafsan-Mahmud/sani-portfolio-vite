@@ -1,0 +1,48 @@
+#lightMode .Why-Choose-Me-bg{
+    background: #cad9e2;
+}
+
+.Why-Choose-Me-bg{
+    width: 100%;
+    height: 100%;
+    background: #090b13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightMode .choose-me h1{
+    color: #090b13;
+}
+.choose-me h1{
+    color: #d3d3d3;
+}
+#lightMode .choose-me h3{
+    color: #1a1c27;
+}
+.choose-me h3{
+    color: #bebebe;  
+}
+.choose-me h2{
+    color: #16be00;
+}
+#lightMode .choose-me p{
+    color: #101012;
+}
+.choose-me p{
+    color: #afafaf;
+    letter-spacing: .5px;
+}
+
+.spin-img-chose:hover{
+    animation: App-logo-spin infinite 60s linear;
+}
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

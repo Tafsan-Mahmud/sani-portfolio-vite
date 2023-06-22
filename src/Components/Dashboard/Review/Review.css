@@ -1,0 +1,412 @@
+#main-review {
+    width: 100%;
+    min-height: 100vh;
+    background: #080b0f;
+}
+
+.wrap-pg-revw {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#review-ttl-h {
+    padding: 5px 45px;
+    color: #bbbbbb;
+    border: 3px solid #cc4831;
+    letter-spacing: 1.5px;
+    margin-bottom: 15vh;
+}
+
+.review-all-input {
+    min-height: 100vh;
+    display: flex;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: 280px;
+}
+
+.main-user-inp-rvw {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+    background: #0a1520;
+}
+
+.rvw-wrp-frm-all-data {
+    position: relative;
+    padding-top: 45px;
+}
+
+.rvw-HW-Sizing {
+    position: absolute;
+    left: 40%;
+    top: -85px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 7px solid #080b0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#rvw-incoming-img {
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+
+.upload-rvw-img-star-rate input[type="file"] {
+    display: none;
+}
+
+.upload-rvw-img-star-rate .rvw-up-img label {
+    border-radius: 5px;
+    padding: 5px 12px;
+    color: #43a722;
+    font-size: 18px;
+    font-weight: 400;
+    border: 2px solid #43a722;
+    background-color: #cbebd9ed;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.upload-rvw-img-star-rate .rvw-up-img label:hover {
+    color: #242424;
+    border: 2px solid #242424;
+    background-color: #91b49eed;
+}
+
+.upload-rvw-img-star-rate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-rvw-img-star-rate p {
+    position: relative;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #bbbbbb;
+    font-size: 19px;
+}
+
+.upload-rvw-img-star-rate p::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    top: -8px;
+    left: 0;
+    border-radius: 5px;
+    background: #cc4831;
+}
+.confirm_btn_sec_review{
+    margin: 10px 0px;
+}
+.confirm_btn_sec_review h4{
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #bbbbbb;
+    font-size: 19px;
+}
+.confirm_btn_sec_review li{
+    width: 120px;
+    text-align: center;
+    list-style: none;
+    color:#cfcece;
+    background: #1f16ca;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    letter-spacing: .7px;
+    cursor: pointer;
+    transition: .3s;
+}
+.confirm_btn_sec_review li:hover{
+    background:#1d15b9 ;
+    color: #c2c1c1;
+}
+
+
+.country_dropdown_input{
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}
+
+.country_dropdown_input span{
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #c4c4c4;
+}
+.dropdown-main-review{
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #7e7e7e;
+    letter-spacing: .5px;
+    background: none;
+    color: #c4c4c4;
+}
+#dynamic_country_drpdwn_opn_clr{
+    color: #0f192b;
+}
+
+.rvw-all-input .rvw-input-data {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.review-all-input .rvw-input-data input, .review-all-input .rvw-input-data textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #c4c4c4;
+    border: none;
+    border-bottom: 2px solid #7e7e7e;
+    outline: none;
+    resize: none;
+    background: none;
+}
+
+.rvw-all-input .rvw-input-data span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #c4c4c4;
+}
+
+.rvw-all-input .rvw-input-data input:focus~span, .rvw-all-input .rvw-input-data input:valid~span, .rvw-all-input .rvw-input-data textarea:focus~span, .rvw-all-input .rvw-input-data textarea:valid~span {
+    color: #cc3a20;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transform: translateY(-20px);
+}
+
+.rvw-all-input .rvw-input-data .underline-rvw {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+
+.rvw-all-input .rvw-input-data .underline-rvw2 {
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+}
+
+.rvw-all-input .rvw-input-data .underline-rvw::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #cc3a20;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.rvw-all-input .rvw-input-data .underline-rvw2::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #cc3a20;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.rvw-all-input .rvw-input-data input:focus~.underline-rvw::before,
+.rvw-all-input .rvw-input-data input:valid~.underline-rvw::before,
+.rvw-all-input .rvw-input-data textarea:focus~.underline-rvw2::before,
+.rvw-all-input .rvw-input-data textarea:valid~.underline-rvw2::before {
+    transform: scaleX(1);
+}
+
+.typ-submit-Review {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 101px;
+    margin-top: 4vh;
+    overflow: hidden;
+    box-shadow: 7px 12px 11px #01010144;
+}
+.rvw-wrp-submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.wrap-rvw .typ-submit-Review input[type="submit"] {
+    position: relative;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #d4d4d4;
+    font-size: 18px;
+    width: 101px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 5px 20px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.typ-submit-Review::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #1b3350;
+    z-index: 1;
+    transition: .5s;
+}
+
+.typ-submit-Review::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #cc3a20;
+    z-index: 1;
+    transition: .5s;
+}
+
+.wrap-rvw .typ-submit-Review:hover::before {
+    color: #181818;
+    left: 0;
+}
+
+.wrap-rvw .typ-submit-Review:hover::after {
+    color: #181818;
+    right: -100%;
+}
+
+@media screen and (max-width: 1300px) {
+    .main-user-inp-rvw {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main-user-inp-rvw {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main-user-inp-rvw {
+        width: 90%;
+    }
+
+    #review-ttl-h {
+        font-size: 30px;
+        padding: 5px 38px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main-user-inp-rvw {
+        width: 93%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .review-all-input {
+        margin-left: 0;
+    }
+
+    .main-user-inp-rvw {
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .upload-rvw-img-star-rate {
+        flex-direction: column;
+    }
+
+    .upload-rvw-img-star-rate .rvw-up-img {
+        margin-top: 20px;
+    }
+
+    .upload-rvw-img-star-rate .star-sec {
+        margin-top: 20px;
+    }
+
+    #review-ttl-h {
+        font-size: 25px;
+        padding: 5px 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rvw-HW-Sizing {
+        left: 38%;
+    }
+}
+@media screen and (max-width: 422px) {
+    .rvw-HW-Sizing {
+        left: 36%;
+    }
+}
+@media screen and (max-width: 372px) {
+    .rvw-HW-Sizing {
+        left: 34%;
+    }
+}
+@media screen and (max-width: 360px) {
+    #review-ttl-h {
+        font-size: 21px;
+        padding: 5px 32px;
+    }
+
+    .main-user-inp-rvw {
+        padding: 20px;
+    }
+    .rvw-HW-Sizing {
+        left: 33%;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .rvw-HW-Sizing {
+        left: 31%;
+    }
+}
+@media screen and (max-width: 334px) {
+    .rvw-HW-Sizing {
+        left: 31%;
+    }
+}
+@media screen and (max-width: 280px) {
+    .rvw-HW-Sizing {
+        left: 29%;
+    }
+}

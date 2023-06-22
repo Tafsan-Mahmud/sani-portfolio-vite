@@ -1,0 +1,43 @@
+#lightModeSet #Satisfied-Customers{
+    background: #c4c8d1;
+}
+#Satisfied-Customers{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #02040b;
+}
+.stft-cstmr-mbl-pic img{
+   width: 80%;
+}
+.stft-cstmr-top-txt{
+    padding-bottom: 12vh;
+}
+#lightModeSet .stft-cstmr-top-txt h2{
+    color: #090b13;
+}
+.stft-cstmr-top-txt h2{
+    font-size: 35px;
+    color: #c4c4c4;
+}
+#lightModeSet .stft-cstmr-top-txt p{
+    color: #0f0f12;
+}
+.stft-cstmr-top-txt p{
+    letter-spacing: .5px;
+    color: #949494;
+}
+.stft-cstmr-insd-txt-dvx h1{
+    font-size: 60px;
+    color: #00a100;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+#lightModeSet .stft-cstmr-insd-txt-dvx h5{
+    color: #090b13;
+}
+.stft-cstmr-insd-txt-dvx h5{
+    color: #bebebe;
+}

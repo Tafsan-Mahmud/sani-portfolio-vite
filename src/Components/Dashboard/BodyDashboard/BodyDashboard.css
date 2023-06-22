@@ -1,0 +1,28 @@
+.BodyDashboard{
+    width: 100%;
+    height: 100vh;
+    background: #080b0f;
+    transition: 0.5s;
+}
+
+.main-dashboard-body{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 280px;
+    padding: 30px;
+}
+
+.main-dashboard-body h1{
+    color: #d9d9d9;
+    letter-spacing: 1px;
+    font-size:  50px;
+    text-shadow: 2px 4px 1px #626262ce;
+}
+@media screen and (max-width: 801px ){
+    .main-dashboard-body{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,48 @@
+#itsLightmode #customer-review{
+    background:#cad9e2;
+}
+
+#customer-review{
+    position: relative;
+    height: 100%;
+    background:#090b13;
+    margin: 0;
+    /* padding: 0; */
+    padding-bottom: 40px;
+}
+.top-text-rvw{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#itsLightmode .top-text-rvw h1{
+    color: #090b13;
+}
+.top-text-rvw h1{
+    color: #e0e0e0;
+}
+#itsLightmode .top-text-rvw p{
+    color: #0e0e10;
+}
+.top-text-rvw p{
+    color: #bbbbbb;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
+.swiper-container {
+    width: 100%;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+.swiper-slide {
+    background-position: center !important;
+    background-size: cover !important;
+    width: 300px !important;
+    height:100% !important;
+  }
+@media(max-width: 768px){
+    .top-text-rvw h1{
+        font-size: 35px;
+        margin: 0 20px;
+    }
+}

@@ -1,0 +1,117 @@
+
+:root{
+    --h1ttlcolour: #c5c5c5;
+    --bgColour: #0a0d13;
+    --tabColour:#c5c5c5;
+}
+#blgPrjct_light {
+    --bgColour: #cad9e2;
+    --h1ttlcolour: #0a0d13;
+    --tabColour:#0a0d13;
+}
+.my_blg_prjct{
+    min-height: 100vh;
+    padding-top: 13vh;
+    padding-bottom: 13vh;
+    background: var(--bgColour);
+}
+.blg_prjct_ttl_style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrp-all-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+#my_blg_prjct_ttl{
+    border: 3px solid #cc4831;
+    padding: 5px 30px;
+    color: var(--h1ttlcolour);
+    font-size: 35px;
+    text-align: center;
+}
+.tabs_style{
+    position: relative;
+    border-bottom: 2px solid #cc4831;
+}
+
+.tabs_style button{
+    position: relative;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    position: relative;
+    outline: none;
+    border: none;
+    background:transparent;
+    color:var(--tabColour);
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    z-index: 2;
+}
+.tabs_style button::before{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    background: #cc4831;
+    transition: .1s;
+}
+.tabs_style button:hover::before{
+    height: 2px;
+}
+
+.tabs_style::after{
+    content: '';
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+    width: 105px;
+    height: 100%;
+    position: absolute;
+    background: #cc4831;
+    transition: .5s;
+    z-index: 1;
+}
+#tab_active .tabs_style::after{
+    margin-left: 107px;
+}
+
+/* .tabs_style button:hover{
+    margin-top: none;
+    border-top:2px solid #cc4831;
+} */
+
+
+@media screen and (max-width: 1422px) {
+    .wrp-all-card{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 35px;
+    }
+}
+@media screen and (max-width: 810px) {
+    .wrp-all-card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 810px) {
+    #my_blg_prjct_ttl{
+    padding: 5px 25px;
+    font-size: 25px;
+    }
+}
+@media screen and (max-width: 290px) {
+    #my_blg_prjct_ttl{
+    padding: 5px 10px;
+    font-size: 20px;
+    }
+}
+

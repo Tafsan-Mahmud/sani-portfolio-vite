@@ -1,0 +1,197 @@
+
+#itsLight .service-crd-dsgn {
+    box-shadow: inset 5px 5px 5px rgb(0 0 0 / 20%),
+    inset -5px -5px 15px rgba(171, 160, 160, 0.1),
+    5px 5px 15px rgb(0 0 0 / 30%),
+    -5px -5px 15px rgba(147, 147, 147, 0.144);
+
+}
+
+
+.service-crd-dsgn {
+    position: relative;
+    height: 460px;
+    /* width:100%; */
+    box-shadow: inset 5px 5px 5px rgb(0 0 0 / 20%),
+        inset -5px -5px 15px rgb(149 149 149 / 10%),
+        5px 5px 15px rgb(0 0 0 / 30%),
+        -5px -5px 15px rgb(200 200 200 / 11%);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: 20px;
+}
+#itsLight .srvc-box {
+    background: #c0cfd7;
+}
+.srvc-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px;
+    background: #090b13;
+    border-top: 4px solid #b64900;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+#itsLight .srvc-box h6 {
+    color: #141414;
+}
+.srvc-box h6 {
+    color: #afafaf;
+}
+.srvc-box img {
+    width: 40px;
+    margin-right: 5px;
+}
+#itsLight .srvc-img-nme {
+    border-bottom: 2px solid #252525;
+}
+.srvc-img-nme {
+    border-bottom: 2px solid silver;
+}
+#itsLight .srvc-img-nme h4 {
+    color: #141414;
+}
+.srvc-img-nme h4 {
+    font-weight: 500;
+    font-size: 25px;
+    color: #d4d3d3;
+}
+
+.srvc-box:hover {
+    transform: translateY(-30px) scale(1.03);
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+
+.cstm-glow-btn {
+    position: relative;
+    width: 165px;
+    height: 50px;
+    margin: 20px;
+}
+#itsLight  .cstm-glow-btn .srvc-deal-btn {
+    color: #252525;
+}
+
+.cstm-glow-btn .srvc-deal-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: 500;
+    transition: 0.5s;
+    outline: none;
+    backdrop-filter: blur(15px);
+}
+
+.cstm-glow-btn:hover .srvc-deal-btn {
+    letter-spacing: 1.5px;
+}
+
+.cstm-glow-btn .srvc-deal-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.cstm-glow-btn:hover .srvc-deal-btn::before {
+    transform: skewX(45deg) translateX(200%);
+}
+
+.cstm-glow-btn::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #e05a00;
+    border-radius: 10px;
+    transition: 0.4s;
+    transition-delay: 0s;
+    box-shadow: 0 0 5px #e05a00,
+        0 0 15px #e05a00,
+        0 0 3px #e05a00,
+        0 0 30px #e05a00;
+}
+
+.cstm-glow-btn:hover:before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.4s;
+}
+
+.cstm-glow-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #e05a00;
+    border-radius: 10px;
+    transition: 0.4s;
+    transition-delay: 0s;
+    box-shadow: 0 0 5px #e05a00,
+        0 0 15px #e05a00,
+        0 0 3px #e05a00,
+        0 0 30px #e05a00;
+}
+
+.cstm-glow-btn:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.4s;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-Width:358px) {
+    .srvc-img-nme h4 {
+        font-size: 20px;
+    }
+
+    .cstm-glow-btn {
+        margin: 2px;
+        font-size: 15px;
+    }
+
+    .srvc-box h6 {
+        font-size: 12px;
+    }
+
+    .srvc-box img {
+        width: 30px;
+    }
+}

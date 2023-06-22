@@ -1,0 +1,115 @@
+
+#smpl_nav_Light .sample-nav-bar-prjct-blg {
+    background: #99a4ab36;
+  }
+  .sample-nav-bar-prjct-blg {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: #050b123b;
+    backdrop-filter: blur(8px);
+    z-index: 5;
+  }
+  #smpl_nav_Light .the-sani-main-logoblg-prjct {
+    color: #090b13;
+  }
+  .the-sani-main-logoblg-prjct {
+    color: #c2c2c2;
+    letter-spacing: 0.5px;
+  }
+  .DLmode-BackHome-blg-prjct {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #smpl_nav_Light .DLmode-BackHome-blg-prjct li {
+    color: #090b13;
+  }
+  
+  .DLmode-BackHome-blg-prjct li {
+    color: #b3b3b3;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin-right: 20px;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .DLmode-BackHome-blg-prjct li:hover {
+    color: #d8d8d8;
+  }
+  
+  .DLmode-BackHome-blg-prjct span {
+    width: 4px;
+    height: 50px;
+    background: #cc4831;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: .5s;
+  }
+#smpl_nav_Light .responsive-togle-btn-blog {
+  color: #090b13;
+  }
+  .responsive-togle-btn-blog {
+    display: none;
+    color: #bbbbbb;
+    font-size: 30px;
+    border-radius: 4px;
+  }
+  
+  .blog-navbar-tgl-active .blg-prjct-navlink-responsive {
+    height: 160px;
+    padding-top: 10px;
+  }
+  #smpl_nav_Light .blg-prjct-navlink-responsive {
+    background: #b7c5cd;
+  }
+  .blg-prjct-navlink-responsive {
+    padding: 0 15px;
+    width: 140px;
+    height: 0;
+    position: absolute;
+    top: 74.5px;
+    right: 0;
+    display: flex;
+    height: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #07131ff6;
+    transition: .3s;
+    overflow: hidden;
+    z-index: 5;
+  }
+  #smpl_nav_Light .blg-prjct-navlink-responsive li {
+    color: #090b13;
+  }
+  .blg-prjct-navlink-responsive li {
+    color: #b3b3b3;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.6px;
+    transition: .3s;
+    cursor: pointer;
+  }
+  .blg-prjct-navlink-responsive li:hover {
+    color: #d8d8d8 !important;
+  }
+
+  @media screen and (max-width: 800px) {
+     .DLmode-BackHome-blg-prjct {
+      display: none;
+     }
+     .responsive-togle-btn-blog {
+      display: block;
+     }
+}

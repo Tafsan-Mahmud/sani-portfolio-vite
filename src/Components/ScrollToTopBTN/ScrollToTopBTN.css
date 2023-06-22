@@ -1,0 +1,45 @@
+
+.scroll-btn-none {
+    display: none;
+    transition: 1s;
+}
+
+.back-to-top-btn-sec {
+    position: fixed;
+    right: 7%;
+    bottom: 10%;
+    width: 33px;
+    height: 33px;
+    background-color: #e05a00;
+    border: 1.6px solid #b8b7b7ea;
+    border-radius: 3px;
+    font-size: 24px;
+    color: #e6e6e6;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#back-to-top-btn {
+    transition: 0.2s;
+    animation:upDown 2s ease-in-out infinite;
+}
+
+@keyframes upDown {
+    0%{
+        transform: translateY(-4px); 
+        
+    }
+    50%{
+        transform: translateY(4px);
+          
+      }
+    100%{
+        transform: translateY(-4px);
+        
+      }
+
+}

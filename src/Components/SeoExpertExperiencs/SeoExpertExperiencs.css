@@ -1,0 +1,62 @@
+#modeLight #Seo-Expert-Experiencs-sectioon{
+    background: #c4c8d1;
+}
+
+#Seo-Expert-Experiencs-sectioon{
+    height: 100%;
+    width: 100%;
+    background: #02040b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modeLight .for-SEOEXPRT-pic img{
+    box-shadow: 10px 20px 80px #575757;
+}
+.for-SEOEXPRT-pic img{
+    width: 100%;
+}
+.for-SEOEXPRT-text-card{
+   margin-left: 15px;
+}
+.for-SEOEXPRT-text-card h1{
+    color: #41b30c;
+    font-size: 50px;
+}
+#modeLight .for-SEOEXPRT-text-card h3{
+   color: #0a0c13;
+}
+.for-SEOEXPRT-text-card h3{
+    font-weight: 700;
+    color: #cecece;
+}
+#modeLight .for-SEOEXPRT-text-card p{
+    color: #191a21;
+ }
+.for-SEOEXPRT-text-card p{
+    font-size: 16.5px;
+    color: #ababab;
+}
+.extra-pwr a{
+    text-decoration: none;
+    color: #e05a00;
+    font-weight: 600;
+    transition: 0.4s ease-in-out;
+}
+.extra-pwr{
+    transition: 0.3s ease-in-out;
+}
+.extra-pwr a:hover{
+    color: #46c40c;
+}
+.extra-pwr:hover{
+  
+   transform: translateX(4px);
+}
+
+@media screen and (max-width: 772px ){
+    .for-SEOEXPRT-text-card{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+}

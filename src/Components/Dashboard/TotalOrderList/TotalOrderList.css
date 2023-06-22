@@ -1,0 +1,184 @@
+#total-order-list {
+    width: 100%;
+    min-height: 100vh;
+    background: #080b0f;
+}
+
+.middle-h1-ttl-ord-lst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#total-odr-list-h1 {
+    padding: 5px 55px;
+    color: #bbbbbb;
+    border: 3px solid #cc4831;
+    letter-spacing: 1.5px;
+    margin-bottom: 10vh;
+}
+.ttlordlstimg{
+    width: 27px;
+    height: 27px;
+    padding: 2px;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.ttlordlstimg img{
+    width: 100%;
+}
+.WRP-total-order-list {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    margin-left: 280px;
+}
+
+.main-content-ttl-list {
+    width: 100%;
+    padding: 20px;
+}
+
+#total-order-list #Pending .CSTM-dprdwn-btn-ttlord-lst{
+    background: #a80046;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#total-order-list #Pending .CSTM-dprdwn-btn-ttlord-lst:hover {
+    background: #94003e;
+    transition: 0.2s;
+}
+
+#total-order-list #On-Going .CSTM-dprdwn-btn-ttlord-lst {
+    background: #aa9f00;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#total-order-list #On-Going .CSTM-dprdwn-btn-ttlord-lst:hover {
+    background: #968c00;
+    transition: 0.2s;
+}
+
+#total-order-list #Done .CSTM-dprdwn-btn-ttlord-lst {
+    background: #009225;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#total-order-list #Done .CSTM-dprdwn-btn-ttlord-lst:hover {
+    background: #007e1f;
+    transition: 0.2s;
+}
+.spinar-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 54%;
+    left: 57%;
+}
+
+.CSTM-dprdwn-btn-ttlord-lst {
+    outline: none;
+    border: none;
+    width: 102px;
+    padding: 7px 8px;
+    color: #f0f8ff;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.cstm-dsgn-tbl-ttl-ord-lst {
+    background: #0a1724;
+    color: #bbbbbb;
+}
+
+.cstm-dsgn-tbl-ttl-ord-lst thead {
+    background: #061e36;
+}
+
+.cstm-dsgn-tbl-ttl-ord-lst thead tr th {
+    letter-spacing: 0.5px;
+}
+
+.cstm-dsgn-tbl-ttl-ord-lst tbody tr:hover {
+    background: #08111a;
+}
+
+.Action-btn-ttl-ord-lst {
+    outline: none;
+    border: none;
+    padding: 7px 8px;
+    color: #f0f8ff;
+    border-radius: 5px;
+    letter-spacing: 0.7px;
+    background: #991717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Action-btn-ttl-ord-lst:hover {
+    background: #861616;
+}
+.dropdown-item-cstm-p{
+    background: #adadad;
+    color: #181818;
+    cursor: pointer;
+    transition: .3s;
+}
+.dropdown-item-cstm-p:hover{
+    background: #4e4e4e;
+    color: #c0c0c0;
+}
+
+.bg-drpdwn-ttl-ord-lst {
+    background: #47392eb7;
+    padding: 5px;
+    backdrop-filter: blur(3px);
+}
+
+
+
+
+
+
+
+
+
+
+/* Make It Responsive */
+
+@media screen and (max-width: 1200px) {
+    .main-content-ttl-list {
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .WRP-total-order-list {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #total-odr-list-h1 {
+        padding: 5px 25px;
+    }
+}
