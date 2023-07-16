@@ -11,27 +11,28 @@ import Spinner from 'react-bootstrap/Spinner';
 const TotalOrderList = () => {
 
 
-    
+
     const [allOrderList, setAllOrderList] = useState([])
     useEffect(() => {
         fetch('http://localhost:4000/getAllBookingData')
-        .then(res=> res.json())
-        .then(data=>{
-            setAllOrderList(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                setAllOrderList(data);
+            })
     }, [allOrderList]);
 
 
     const handleStatusChange = (status, id) => {
-        fetch(`http://localhost:4000/changeStatus/${id}`,{
-            method: 'PATCH',
+        fetch(`http://localhost:4000/changeStatus/${id}`, {
+            method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body:JSON.stringify({status: status})
+            body: JSON.stringify({ status: status })
         })
-        .then(res =>{
-           
-            toast.success("Status Change Successfully")
-        })
+            .then(res => {
+                if (res) {
+                    toast.success("Status Change Successfully")
+                }
+            })
     }
 
     const SWALmodalon = (id) => {
@@ -44,14 +45,16 @@ const TotalOrderList = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:4000/deleteSingleBooking/${id}`,{
+                    fetch(`http://localhost:4000/deleteSingleBooking/${id}`, {
                         method: 'DELETE',
                     })
-                    .then(res =>{
-                    })
-                    swal("Poof! Your imaginary file has been deleted!", {
-                        icon: "success",
-                    });
+                        .then(res => {
+                            if (res) {
+                                swal("Poof! Your imaginary file has been deleted!", {
+                                    icon: "success",
+                                });
+                            }
+                        })
                 } else {
                     swal("Your imaginary file is safe!");
                 }
@@ -60,22 +63,22 @@ const TotalOrderList = () => {
 
     return (
         <div id="total-order-list">
-            
+
             <Sidebar></Sidebar>
             <div className="WRP-total-order-list">
-               
+
                 <div className="middle-h1-ttl-ord-lst">
-                <ToastContainer
-                    position="top-right"
-                    autoClose={3000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="light"
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={3000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
                     />
                     <h1 id='total-odr-list-h1'>Total Order List</h1>
                 </div>
@@ -98,7 +101,7 @@ const TotalOrderList = () => {
                                 <th className="text-color-p" scope="col">Action</th>
                             </tr>
                         </thead>
-                       
+
                         <tbody className="style-something">
 
                             {
@@ -109,11 +112,11 @@ const TotalOrderList = () => {
                                         <td className="text-color-p">{data.clientEmail}</td>
                                         <td className="text-color-p">
                                             <div className="d-flex">
-                                            <div className="ttlordlstimg">
-                                                <img src={data.serviceImage} alt="" />
-                                            </div>{data.serviceName}
+                                                <div className="ttlordlstimg">
+                                                    <img src={data.serviceImage} alt="" />
+                                                </div>{data.serviceName}
                                             </div>
-                                           </td>
+                                        </td>
                                         <td className="text-color-p">{data.clientWhatsAppNmbr}</td>
                                         <td className="text-color-p">{data.clientCountry}</td>
                                         <td className="text-color-p">
@@ -122,15 +125,15 @@ const TotalOrderList = () => {
                                                     {data.status}
                                                 </button>
                                                 <ul className="dropdown-menu bg-drpdwn-ttl-ord-lst" aria-labelledby="dropdownMenuButton1">
-                                                    <li class="dropdown-item dropdown-item-cstm-p" onClick={()=>handleStatusChange('Pending',data._id)}>Pending</li>
-                                                    <li class="dropdown-item dropdown-item-cstm-p"onClick={()=>handleStatusChange('On-Going',data._id)}>On going</li>
-                                                    <li class="dropdown-item dropdown-item-cstm-p" onClick={()=>handleStatusChange('Done',data._id)}>Done</li>
+                                                    <li class="dropdown-item dropdown-item-cstm-p" onClick={() => handleStatusChange('Pending', data._id)}>Pending</li>
+                                                    <li class="dropdown-item dropdown-item-cstm-p" onClick={() => handleStatusChange('On-Going', data._id)}>On going</li>
+                                                    <li class="dropdown-item dropdown-item-cstm-p" onClick={() => handleStatusChange('Done', data._id)}>Done</li>
                                                 </ul>
                                             </div>
 
                                         </td>
                                         <td>
-                                            <button onClick={()=>SWALmodalon(data._id)} class="Action-btn-ttl-ord-lst">Delete</button>
+                                            <button onClick={() => SWALmodalon(data._id)} class="Action-btn-ttl-ord-lst">Delete</button>
                                         </td>
                                     </tr>
 

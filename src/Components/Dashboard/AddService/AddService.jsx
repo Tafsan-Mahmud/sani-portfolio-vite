@@ -124,6 +124,14 @@ const AddService = () => {
                 dangerMode: true,
             });
         }
+        else if(val === 3){
+            swal({
+                title: "Warning",
+                text: "please Select a image",
+                icon: "warning",
+                dangerMode: true,
+            });
+        }
     }
     return (
         <div id="addService">
@@ -199,12 +207,18 @@ const AddService = () => {
                             <div className="srvs-sbmt-sec">
                                 <div className="srvs-sbmt-btn-sec">
                                     {
+                                        !preview ? <input onClick={()=>handleSureImgIsTrue(3)} className='sure-img-confirm-add' type="button" value="Submit" /> :
+                                        <>
+                                        {
                                         forUpload && !disable ? <input onClick={()=>handleSureImgIsTrue(1)} className='sure-img-confirm-add' type="button" value="Submit" /> : <div>
                                             {
                                                 !forUpload ? <input className='sure-img-confirm-add' type="submit" value="Submit" /> : <input onClick={()=>handleSureImgIsTrue(2)} className='sure-img-confirm-add' type="button" value="Submit" />
                                             }
                                         </div>
                                     }
+                                        </>
+                                    }
+                                    
                                 </div>
                             </div>
                         </form>

@@ -10,9 +10,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 const ManageService = () => {
-    const [allService, setAllService] = useState([])
+    const [allService, setAllService] = useState([]);
+    const id = "6425e44e00abd366a2233899"
     useEffect(()=>{
-        fetch('http://localhost:4000/getAllService')
+        fetch(`http://localhost:4000/getAllService`)
         .then(res => res.json())
         .then(data =>{
             setAllService(data.reverse());

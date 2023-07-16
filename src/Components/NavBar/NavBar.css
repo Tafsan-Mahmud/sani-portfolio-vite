@@ -1,3 +1,8 @@
+#nav-bg-clr-cstm{
+    background: #060a1d18;
+    backdrop-filter: blur(10px); 
+}
+
 #navModeLight #brand-name-nav{
     color: #1d1d1d;
 }
@@ -47,10 +52,10 @@
     transition: width .5s;
     /* transition: .2s; */
 }
-#nav-bg-clr-cstm{
+/* #nav-bg-clr-cstm{
     background: #060a1d18;
     backdrop-filter: blur(10px); 
-}
+} */
 
 
 @media screen and (max-width: 620px ){
@@ -58,6 +63,13 @@
     .rspnv-sbrnd{
         font-size: 25px !important;
     }
-   
+    #nav-bg-clr-cstm{
+        background: #0a0d13e7;
+        /* backdrop-filter: blur(10px);  */
+    }
+    #navModeLight #nav-bg-clr-cstm{
+        background: #cad9e2e7
+        
+    }
 
 }

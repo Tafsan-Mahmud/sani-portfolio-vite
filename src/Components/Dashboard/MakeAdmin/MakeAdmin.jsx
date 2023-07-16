@@ -33,6 +33,11 @@ const MakeAdmin = () => {
                   });
            }
         })
+        swal({
+            title: "Plese Wait a second",
+            icon: "info",
+            dangerMode: true,
+        });
         setEmailData('');
 
     }

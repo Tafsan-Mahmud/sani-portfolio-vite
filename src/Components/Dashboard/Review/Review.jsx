@@ -26,13 +26,14 @@ const Review = () => {
         setForupload(e.target.files[0]);
     }
     const handleUploadImageToServer = ()=>{
+        setDisable(true);
         swal({
             title: "Please Wait",
             text: "image uploading to the server, wait a few second!",
             icon: "warning",
         }).then(res =>{
             if(res){
-                setDisable(true);   
+                setDisable(true); 
             }
         })
         const imageData = new FormData();
@@ -45,6 +46,7 @@ const Review = () => {
                 icon: "success",
                 button: "ok",
               });
+              setDisable(true); 
               setReviewerImage(res.data.data.display_url)
               setForupload(null);
         })
@@ -124,7 +126,7 @@ const Review = () => {
                                   setReviewerTittle('');
                                   setReviewerDESP('');
                                   setPreview(null);
-                    
+                                  setDisable(false); 
                             });
                         } 
                     }

@@ -9,7 +9,7 @@ import './Home.css';
 
 
 const Home = () => {
-    const [mainTheme, setMainTheme]= useContext(PageTheme);
+    const [mainTheme, setMainTheme] = useContext(PageTheme);
     const [lightOrDark, setLightOrDark] = useState(null);
     const [animationRSP4, setAnimationRSP4] = useState(false);
 
@@ -21,13 +21,13 @@ const Home = () => {
         }
 
     }, [mainTheme]);
-    
+
     return (
         <div id={lightOrDark ? 'lightmodeOn' : ''}>
             <div id="home-section-with-core-content">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
-                        <div data-aos="fade-right"  className="col-md-6 mb-4">
+                        <div data-aos="fade-right" className="col-md-6 mb-4">
                             <div className="home-main-text">
                                 <h5>Hello, im</h5>
                                 <h1>Sani Hossain</h1>
@@ -37,7 +37,7 @@ const Home = () => {
                                 <button type="button" class="ml-4 my-button-cstm-rem"><FontAwesomeIcon icon={faDownload} /> Resume</button>
                             </div>
                         </div>
-                        <div data-aos={animationRSP4 ? 'fade-up' : 'fade-left'}  className="col-md-6 mb-4 d-flex justify-content-evenly align-items-center">
+                        <div data-aos={animationRSP4 ? 'fade-up' : 'fade-left'} className="col-md-6 mb-4 d-flex justify-content-evenly align-items-center">
                             <div className="home-image">
                                 <img src={homeMainPic} alt="" />
                             </div>

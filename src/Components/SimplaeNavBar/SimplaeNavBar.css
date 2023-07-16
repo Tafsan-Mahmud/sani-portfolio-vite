@@ -1,21 +1,22 @@
-
+.sample-nav-bar-prjct-blg {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: #050b123b;
+  backdrop-filter: blur(8px) !important;
+  z-index: 5;
+}
 #smpl_nav_Light .sample-nav-bar-prjct-blg {
     background: #99a4ab36;
+    backdrop-filter: blur(8px) !important;
   }
-  .sample-nav-bar-prjct-blg {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    background: #050b123b;
-    backdrop-filter: blur(8px);
-    z-index: 5;
-  }
+  
   #smpl_nav_Light .the-sani-main-logoblg-prjct {
     color: #090b13;
   }
@@ -113,3 +114,14 @@
       display: block;
      }
 }
+@media screen and (max-width: 620px) {
+  #smpl_nav_Light .sample-nav-bar-prjct-blg {
+    background: #cad9e2e7;
+    /* backdrop-filter: blur(8px) !important; */
+  }
+  .sample-nav-bar-prjct-blg {
+    background: #0a0d13e7;
+    /* backdrop-filter: blur(8px) !important; */
+  }
+}
+

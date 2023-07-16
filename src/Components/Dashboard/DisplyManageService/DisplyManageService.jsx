@@ -56,7 +56,7 @@ const DisplyManageService = (props) => {
     const handleUpadteService = (x) =>{
         x.preventDefault()
         fetch(`http://localhost:4000/updateService/${_id}`,{
-            method:'PATCH',
+            method:'PUT',
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify({
                 serviceImage:servicImage,
