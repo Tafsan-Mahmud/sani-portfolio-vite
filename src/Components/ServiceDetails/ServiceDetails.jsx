@@ -12,7 +12,7 @@ import SimpleNavBar from '../SimplaeNavBar/SimplaeNavBar';
 
 const ServiceDetails = () => {
     const { Sid } = useParams();
-    const [navbar, setNavbar]= useState(false);
+    const [navbar, setNavbar] = useState(false);
     const [show, setShow] = useState(false);
     const [allCountry, setAllCountry] = useState([])
     const [singleData, setSingleData] = useState({})
@@ -28,44 +28,45 @@ const ServiceDetails = () => {
         const dlData = JSON.parse(localStorage.getItem('DLMode'));
         setLightOrDark(dlData);
     }, [mainTheme]);
-    const handleConfirmBooking = (e) =>{
+    const handleConfirmBooking = (e) => {
         e.preventDefault()
-        if(countryName === ''){
+        if (countryName === '') {
             swal({
                 title: "Please Select Your Country!",
                 icon: "warning",
                 button: "ok",
-              });
+            });
         }
-        else{
-        const clientData = { 
-            serviceID:id.toString(),
-            serviceName:ServiceName,
-            clientName:clientName,
-            clientEmail:clientEmail,
-            clientWhatsAppNmbr:clientWhatsAppNmbr,
-            clientCountry:countryName,
-            serviceImage:ServiceImage,
-            status:'Pending'
-        }
-        fetch('http://localhost:4000/newClientBoking',{
-            method:'POST',
-            headers:{'content-type':'application/json'},
-            body:JSON.stringify(clientData)
-        })
-        .then(res =>{
-            swal({
-                title: "Booking Confirm Successfully",
-                icon: "success",
-                button: "ok",
-              });
+        else {
+            const clientData = {
+                serviceID: id.toString(),
+                serviceName: ServiceName,
+                clientName: clientName,
+                clientEmail: clientEmail,
+                clientWhatsAppNmbr: clientWhatsAppNmbr,
+                clientCountry: countryName,
+                serviceImage: ServiceImage,
+                status: 'Pending'
+            }
+            fetch('http://localhost:4000/newClientBoking', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(clientData)
+            })
+                .then(res => {
+                    if (res) {
+                        swal({
+                            title: "Booking Confirm Successfully",
+                            icon: "success",
+                            button: "ok",
+                        });
+                    }
+                })
+            setClientName('');
+            setClientEmail('')
+            setClientWhatsAppNmbr('')
+            setCountryName('')
             handleClose();
-        })
-        setClientName('');
-        setClientEmail('')
-        setClientWhatsAppNmbr('')
-        setCountryName('')
-    
         }
     }
 
@@ -107,39 +108,39 @@ const ServiceDetails = () => {
                             <div className="dtl-srvc-booking-form-sec">
                                 <form onSubmit={handleConfirmBooking} action="" autocomplete="off" style={{ paddingBottom: '20px' }}>
                                     <div className="srvs-dtl-bkng-frm">
-                                    <h5>Service Name</h5>
-                                    <input type="text" readOnly value={'->'+ServiceName} />
+                                        <h5>Service Name</h5>
+                                        <input type="text" readOnly value={'->' + ServiceName} />
                                     </div>
                                     <div className="dtl-srvc-booking-form-input-data">
-                                        <input onChange={(e)=>setClientName(e.target.value)} value={clientName} type="text" required name="Name" />
+                                        <input onChange={(e) => setClientName(e.target.value)} value={clientName} type="text" required name="Name" />
                                         <span>Your Name</span>
                                         <div className="underline-dtl-srvc-booking-form"></div>
                                     </div>
                                     <div className="dtl-srvc-booking-form-input-data">
-                                        <input onChange={(e)=>setClientEmail(e.target.value)} value={clientEmail} type='email' required name="Email" />
+                                        <input onChange={(e) => setClientEmail(e.target.value)} value={clientEmail} type='email' required name="Email" />
                                         <span>Email</span>
                                         <div className="underline-dtl-srvc-booking-form"></div>
                                     </div>
                                     <div className="dtl-srvc-booking-form-input-data">
-                                        <input onChange={(e)=>setClientWhatsAppNmbr(e.target.value)} value={clientWhatsAppNmbr} type="number" required name="WhatsAppNumber" id="" />
+                                        <input onChange={(e) => setClientWhatsAppNmbr(e.target.value)} value={clientWhatsAppNmbr} type="number" required name="WhatsAppNumber" id="" />
                                         <span>What's App Number</span>
                                         <div className="underline-dtl-srvc-booking-form"></div>
                                     </div>
                                     <div className="mt-4">
                                         <span className='cntry_scltn_drpdwn'>Your Country</span>
                                         <select id='dtl-srvc-booking-form-country-drpdwn' name='Country' required value={countryName} onChange={(e) => setCountryName(e.target.value)}>
-                                        <option>-- select a country --</option>
+                                            <option>-- select a country --</option>
                                             {
                                                 allCountry.map(country => <option id='dtl-srvc-booking-form-country-drpdwn-option-maping'>{country.name}</option>)
                                             }
 
                                         </select>
                                     </div>
-                                      <div className="submit-half">
+                                    <div className="submit-half">
                                         <div className="typ-submit-srvs-dtl">
                                             <input type="submit" value="Confirm" />
                                         </div>
-                                      </div>
+                                    </div>
                                 </form>
                             </div>
                         </Modal>

@@ -27,9 +27,9 @@ const Login = () => {
                         <button className="login-sign-in-submit" type='submit'> sign in</button>
                         <p className="forgot-pass">Forgot Password ?</p>
                         <div className="login-social-media">
+                            <h5>Sign-in with Social Media</h5>
                             <li><img src="https://www.africabaie.com/wp-content/uploads/2020/10/facebook-logo-2019.png" alt="" /></li>
                             <li><img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt="" /></li>
-                            <li><img src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png" alt="" /></li>
                         </div>
                     </form>
                 </div>

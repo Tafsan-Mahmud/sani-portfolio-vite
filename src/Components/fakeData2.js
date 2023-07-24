@@ -16,7 +16,7 @@ const myBlogFakeData = [
     },
     {
         id: 3,
-        blogImage: `https://mk0adespressoj4m2p68.kinstacdn.com/wp-content/uploads/2020/01/how-to-market-your-business-on-twitter-in-2020.jpg`,
+        blogImage: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6BAfykEYnflsQ5yNn-1EeQRw3EJ04CEnqw&usqp=CAU`,
         tittle: 'Twitter Marketing',
         shortDisCription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nulla.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nulla adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nulla',
         Status: 'Pending',
@@ -30,7 +30,7 @@ const myBlogFakeData = [
     },
     {
         id: 5,
-        blogImage: `https://mk0adespressoj4m2p68.kinstacdn.com/wp-content/uploads/2019/07/linkedin-promote-business-refresh.jpg`,
+        blogImage: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT81dr57htueB5bsCo-MxqKg9YaQnJHjhi8XHOsfuDGpR5_SCah0rAvrXDT1QUccIRKMUE&usqp=CAU`,
         tittle: 'How to Promote Your Business on LinkedIn',
         shortDisCription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nulla.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nulla adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nullaLorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero praesentium nulla',
         Status: 'Pending',

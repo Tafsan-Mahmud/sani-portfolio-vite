@@ -41,6 +41,7 @@ const Sidebar = () => {
                 <div className="user-sgn-reg-img">
                     <img src={exampleImg} alt="" />
                     <h4>{halfOrFullName ? exampleName : removeNameEnd}</h4>
+                    <div id='user_active_green'></div>
                 </div>
             </div>
             <div id="hide-sidebar-ext" className={themeInside ? 'all-link-sec2 activw-bg-sd-br' : 'all-link-sec2'}>

@@ -17,6 +17,7 @@
 }
 .user-sgn-reg-img{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     margin-right: 8vh;
@@ -117,6 +118,20 @@
 .dsh-brd-D-L-btn{
     margin-left: 25px;
 }
+
+#user_active_green {
+    height: 15px;
+    width: 15px;
+    bottom: 2px;
+    left: 35px;
+    position: absolute;
+    background: #00d300;
+    border: 2px solid #000929;
+    border-radius: 10px;
+    /* z-index: 9; */
+}
+
+
 
 @media screen and (max-width: 800px ){
     #hide-sidebar-ext{
