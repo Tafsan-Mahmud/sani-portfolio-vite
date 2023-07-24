@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTopBTN from './Components/ScrollToTopBTN/ScrollToTopBTN';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 ReactDOM.render(
   <React.StrictMode>
     <ScrollToTopBTN></ScrollToTopBTN>
+    <MessengerCustomerChat pageId="102776305148106" appId="169750802785290" />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

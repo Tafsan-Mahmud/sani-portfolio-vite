@@ -11,7 +11,6 @@ import NavBar from '../NavBar/NavBar';
 import SatisfiedCustomers from '../SatisfiedCustomers/SatisfiedCustomers';
 import SeoExpertExperiencs from '../SeoExpertExperiencs/SeoExpertExperiencs';
 import WhyChooseMe from '../WhyChooseMe/WhyChooseMe';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 import './FullPage.css';
 
 
@@ -23,7 +22,7 @@ const FullPage = () => {
         <div className="all-sec-pg-dngr">
             <NavBar></NavBar>
             <Home></Home>
-            <MessengerCustomerChat pageId="102776305148106" appId="611792551020341" htmlRef="<REF_STRING>" />
+            
             <SeoExpertExperiencs></SeoExpertExperiencs>
             <MainService></MainService>
             <AboutMESkills></AboutMESkills>
