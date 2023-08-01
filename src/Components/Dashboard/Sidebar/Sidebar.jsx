@@ -2,20 +2,27 @@ import React, { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { PageTheme } from '../../../App';
+import { AuthUser, PageTheme } from '../../../App';
 import DarkLightSEC from '../../DarkLightSEC/DarkLightSEC';
 import './Sidebar.css';
 
 
 const Sidebar = () => {
-    const exampleImg = `https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png`;
-    const exampleName = "MD Sani Hawlader";
-    const removeNameEnd = exampleName.split(' ').slice(0, 2).join(' ');
+
+    //ContextApiDATA//
+
+    const [authUser, setAuthUser] = useContext(AuthUser);
     const [mainTheme, setMainTheme] = useContext(PageTheme);
+
+    //ContextApiDATA//
+
+    const exampleImg = `https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png`;
+    
+    // const removeNameEnd = usersName.split(' ').slice(0, 2).join(' ');
 
 
     const [showOrLess, setShowOrLess] = useState(false);
-    const [halfOrFullName, setHalfOrFullName] = useState(true);
+    const [halfOrFullName, setHalfOrFullName] = useState(false);
 
     const [themeInside, setThemeInside] = useState(null);
 
@@ -27,7 +34,7 @@ const Sidebar = () => {
         // setThemeInside(data)
 
         if (window.innerWidth < 690) {
-            setHalfOrFullName(false)
+            setHalfOrFullName(true)
         }
     }, [mainTheme]);
     const toggleSidebar = () => {
@@ -39,8 +46,10 @@ const Sidebar = () => {
             <div className="top-nav-sidebar">
                 <span onClick={toggleSidebar}><i class="fas fa-bars"></i></span>
                 <div className="user-sgn-reg-img">
-                    <img src={exampleImg} alt="" />
-                    <h4>{halfOrFullName ? exampleName : removeNameEnd}</h4>
+                    <div className="dash_user_actv_img">
+                        <img src={authUser.email ? authUser.photoURL : exampleImg} alt="" />
+                    </div>
+                    <h4>{halfOrFullName ? authUser.displayName.split(' ').slice(0, 2).join(' ') : authUser.displayName}</h4>
                     <div id='user_active_green'></div>
                 </div>
             </div>
