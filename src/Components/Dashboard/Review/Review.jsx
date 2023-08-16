@@ -108,7 +108,7 @@ const Review = () => {
                                 reviewerTittle:reviewerTittle,
                                 reviewerDESP:reviewerDESP
                             }
-                            fetch('http://localhost:4000/addNewReview',{
+                            fetch('https://portfolio-server-fawn.vercel.app/addNewReview',{
                                 method:'POST',
                                 headers:{ 'Content-Type': 'application/json' },
                                 body:JSON.stringify(alldata)
@@ -256,7 +256,7 @@ export default Review;
 //         reviewerTittle:reviewerTittle,
 //         reviewerDESP:reviewerDESP
 //     }
-//     fetch('http://localhost:4000/addNewReview',{
+//     fetch('https://portfolio-server-fawn.vercel.app/addNewReview',{
 //         method:'POST',
 //         headers:{ 'Content-Type': 'application/json' },
 //         body:JSON.stringify(alldata)

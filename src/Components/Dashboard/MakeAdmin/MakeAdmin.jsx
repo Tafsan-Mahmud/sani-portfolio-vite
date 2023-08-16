@@ -12,7 +12,7 @@ const MakeAdmin = () => {
 
     const handleAdminStore = (e) =>{
       e.preventDefault();
-        fetch('http://localhost:4000/makeAdmin',{
+        fetch('https://portfolio-server-fawn.vercel.app/makeAdmin',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify({adminEmail: eamilData})

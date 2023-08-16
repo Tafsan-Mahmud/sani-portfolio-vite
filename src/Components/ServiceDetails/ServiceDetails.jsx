@@ -48,7 +48,7 @@ const ServiceDetails = () => {
                 serviceImage: ServiceImage,
                 status: 'Pending'
             }
-            fetch('http://localhost:4000/newClientBoking', {
+            fetch('https://portfolio-server-fawn.vercel.app/newClientBoking', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(clientData)

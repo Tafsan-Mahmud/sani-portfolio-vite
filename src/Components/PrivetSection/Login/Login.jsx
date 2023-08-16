@@ -6,16 +6,22 @@ import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, sendEmailV
 import { app } from '../../firebase/firebase.init';
 import swal from 'sweetalert';
 import { AuthUser } from '../../../App';
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom';
 
 
 const Login = () => {
+
+    const history = useHistory();
+    const location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+
     //ContextAuthDATA//
 
     const [authUser, setAuthUser] = useContext(AuthUser);
-    console.log(authUser);
-
+    // console.log(authUser);
 
     //ContextAuthDATA//
+
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
     const [toggleInUpBtn, setToggleInUpBtn] = useState(false)
@@ -26,7 +32,15 @@ const Login = () => {
     const [regEmail, setRegEmail] = useState('')
     const [regPass, setRegPass] = useState('');
     const [regPassConfirm, setRegPassConfirm] = useState('');
+    // const [trigger, setTrigger] = useState(false);
     // console.log(toggleInUpBtn)
+
+
+    // useEffect(() => {
+    //     localStorage.setItem('diersu', JSON.stringify(false));
+    //     // setAuthUser(user);
+    // }, []);
+
 
     const handletoggleSlider = () => {
         setToggleInUpBtn(!toggleInUpBtn);
@@ -43,33 +57,41 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 // console.log(user);
-                setAuthUser(result.user)
+                // setTrigger(true);
+                handlelocaldata(result.user, true);
             })
             .catch(err => {
                 console.log(err.message)
             })
 
     }
+    const handleFacebookSigninPopup = ()=>{
+        swal({
+            title: "Working Progress",
+            text: "this feature coming soon. you can sign in with [GOOGLE]",
+            icon: "warning",
+            button: true,
+        })
+    }
     const handleSignupWithEmailandPass = (e) => {
         e.preventDefault();
-        const displayName = regName;
         if (regPass === regPassConfirm) {
             createUserWithEmailAndPassword(auth, regEmail, regPass)
                 .then(result => {
-
                     updateProfile(auth.currentUser, {
                         displayName: regName,
                     })
                         .then(res => {
-                            setAuthUser(result.user);
+                            // setTrigger(true);
+                            handlelocaldata(result.user, true);
                         })
-                    
+
                     if (result) {
                         swal({
                             title: "Please Verify Your Email [required]",
-                            text:"we already send you a verification email please check! your email that you provide",
+                            text: "we already send you a verification email please check! your email that you provide",
                             icon: "warning",
-                          });
+                        });
                         setErr('');
                         setRegName('');
                         setRegEmail('');
@@ -77,9 +99,9 @@ const Login = () => {
                         setRegPassConfirm('');
                     }
                     sendEmailVerification(auth.currentUser)
-                    .then(verify=>{
+                        .then(verify => {
 
-                    })
+                        })
                 })
                 .catch(err => {
                     setErr(err.message);
@@ -96,11 +118,27 @@ const Login = () => {
                 setErr('');
                 setEmail('');
                 setPass('');
-                setAuthUser(result.user)
+                // setTrigger(true);
+                handlelocaldata(result.user, true);
             })
             .catch(err => {
                 setErr(err.message);
             })
+    }
+    const handlelocaldata = (data, redirect) => {
+        const ftr = {
+            marlin: data.email,
+            nixer: data.displayName,
+            sbiulr: data.photoURL,
+            accessTKN: data.accessToken,
+            ismarlinfide: data.emailVerified,
+            idu: data.uid,
+        }
+        setAuthUser(ftr);
+        localStorage.setItem('diersu', JSON.stringify(ftr));
+        if (redirect) {
+            history.replace(from);
+        }
     }
 
     return (
@@ -125,7 +163,7 @@ const Login = () => {
                         <p className="forgot-pass">Forgot Password ?</p>
                         <div className="login-social-media">
                             <h5>Sign-in with Social Media</h5>
-                            <li><img src="https://www.africabaie.com/wp-content/uploads/2020/10/facebook-logo-2019.png" alt="" /></li>
+                            <li onClick={handleFacebookSigninPopup}><img src="https://www.africabaie.com/wp-content/uploads/2020/10/facebook-logo-2019.png" alt="" /></li>
                             <li onClick={handleSignInWithPopup}><img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt="" /></li>
                         </div>
                     </form>

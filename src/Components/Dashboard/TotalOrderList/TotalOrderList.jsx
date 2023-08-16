@@ -14,7 +14,7 @@ const TotalOrderList = () => {
 
     const [allOrderList, setAllOrderList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:4000/getAllBookingData')
+        fetch('https://portfolio-server-fawn.vercel.app/getAllBookingData')
             .then(res => res.json())
             .then(data => {
                 setAllOrderList(data);
@@ -23,7 +23,7 @@ const TotalOrderList = () => {
 
 
     const handleStatusChange = (status, id) => {
-        fetch(`http://localhost:4000/changeStatus/${id}`, {
+        fetch(`https://portfolio-server-fawn.vercel.app/changeStatus/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: status })
@@ -45,7 +45,7 @@ const TotalOrderList = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:4000/deleteSingleBooking/${id}`, {
+                    fetch(`https://portfolio-server-fawn.vercel.app/deleteSingleBooking/${id}`, {
                         method: 'DELETE',
                     })
                         .then(res => {

@@ -75,7 +75,7 @@ const AddService = () => {
         Discription: srvsDiscription
     } 
         
-        fetch('http://localhost:4000/addNewService',{
+        fetch('https://portfolio-server-fawn.vercel.app/addNewService',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(allData)

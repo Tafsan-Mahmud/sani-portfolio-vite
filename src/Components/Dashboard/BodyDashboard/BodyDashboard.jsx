@@ -25,7 +25,6 @@ const BodyDashboard = () => {
 
     }
 
-    console.log(lightOrDark)
 
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem('DLMode'));

@@ -28,6 +28,7 @@ const DisplyManageService = (props) => {
         setForUpload(val.target.files[0]);
     }
    
+    
     const handleImageToServer = () =>{
         swal({
             title: "Please Wait",
@@ -55,7 +56,7 @@ const DisplyManageService = (props) => {
 
     const handleUpadteService = (x) =>{
         x.preventDefault()
-        fetch(`http://localhost:4000/updateService/${_id}`,{
+        fetch(`https://portfolio-server-fawn.vercel.app/updateService/${_id}`,{
             method:'PUT',
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify({
@@ -95,7 +96,7 @@ const DisplyManageService = (props) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:4000/deleteService/${_id}`,{
+                    fetch(`https://portfolio-server-fawn.vercel.app/deleteService/${_id}`,{
                         method:'DELETE'
                     })
                     .then(res =>{

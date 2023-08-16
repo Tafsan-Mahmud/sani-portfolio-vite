@@ -18,6 +18,7 @@ import Login from './Components/PrivetSection/Login/Login';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 import 'aos/dist/aos.css';
 import MyBlogAndProject from './Components/MyBlogAndProject/MyBlogAndProject';
+import PrivetRoute from './Components/PrivetSection/PrivetRoute';
 
 export const PageTheme = createContext();
 export const AuthUser = createContext();
@@ -43,30 +44,43 @@ function App() {
             <Route path="/My-Blog-And-Project">
               <MyBlogAndProject></MyBlogAndProject>
             </Route>
-            <Route path="/Dashboard">
+
+            // PrivetSection //
+
+            <PrivetRoute path="/Dashboard">
               <BodyDashboard></BodyDashboard>
-            </Route>
-            <Route path="/make-Admin">
+            </PrivetRoute>
+
+            <PrivetRoute path="/make-Admin">
               <MakeAdmin></MakeAdmin>
-            </Route>
-            <Route path="/manage-service">
+            </PrivetRoute>
+
+            <PrivetRoute path="/manage-service">
               <ManageService></ManageService>
-            </Route>
-            <Route path="/review">
+            </PrivetRoute>
+
+            <PrivetRoute path="/review">
               <Review></Review>
-            </Route>
-            <Route path="/total-order-list">
+            </PrivetRoute>
+
+            <PrivetRoute path="/total-order-list">
               <TotalOrderList></TotalOrderList>
-            </Route>
-            <Route path="/my-booking">
+            </PrivetRoute>
+
+            <PrivetRoute path="/my-booking">
               <MyBookingList></MyBookingList>
-            </Route>
-            <Route path="/ServiceDetail/:Sid">
+            </PrivetRoute>
+
+            <PrivetRoute path="/ServiceDetail/:Sid">
               <ServiceDetails></ServiceDetails>
-            </Route>
-            <Route path="/add-service">
+            </PrivetRoute>
+
+            <PrivetRoute path="/add-service">
               <AddService></AddService>
-            </Route>
+            </PrivetRoute>
+
+            // END PrivetSection //
+
             <Route path="/login">
               <Login></Login>
             </Route>
