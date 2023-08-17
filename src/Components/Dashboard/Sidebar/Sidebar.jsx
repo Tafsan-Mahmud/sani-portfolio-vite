@@ -7,11 +7,13 @@ import DarkLightSEC from '../../DarkLightSEC/DarkLightSEC';
 import './Sidebar.css';
 import { getAuth, signOut } from 'firebase/auth';
 import { app } from '../../firebase/firebase.init';
-import { Redirect ,useHistory} from 'react-router-dom/cjs/react-router-dom.min';
+import { Redirect, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const Sidebar = () => {
     const history = useHistory();
+    const [accessAdmin, setAccessAdmin] = useState(false);
+
     //ContextApiDATA//
 
     const [authUser, setAuthUser] = useContext(AuthUser);
@@ -68,25 +70,27 @@ const Sidebar = () => {
     // console.log(themeInside)
 
     useEffect(() => {
+
         const user = JSON.parse(localStorage.getItem('diersu'));
         setAuthUser(user);
         const data = JSON.parse(localStorage.getItem('DLMode'));
-        // setThemeInside(data)
-
         if (window.innerWidth < 690) {
             setHalfOrFullName(true)
         }
+
+        fetch('https://portfolio-server-fawn.vercel.app/isAdminHere', {
+            method: "POST",
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ adminEmail: user.marlin })
+        })
+            .then(res => res.json())
+            .then(result => {
+                setAccessAdmin(result);
+            })
     }, [mainTheme]);
     const toggleSidebar = () => {
         setShowOrLess(!showOrLess)
     }
-
-
-
-
-
-
-
 
     return (
         <div id="Sidebar" className={showOrLess ? 'main-Sidebar sidebar-active' : 'main-Sidebar'}>
@@ -108,10 +112,15 @@ const Sidebar = () => {
                     <h2 id="cstm-sdbr-h3-dsg"><i class="fab fa-phoenix-framework"></i> The Sani</h2>
                     <div className="main-lnk ">
                         <Link to='/home' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-home"></i></span> Back To Home</h4></Link>
-                        <Link to='/make-Admin' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-user-cog"></i></span> Make Admin</h4></Link>
-                        <Link to='/manage-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fab fa-accusoft"></i></span> Manage Service</h4></Link>
-                        <Link to='/add-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="far fa-calendar-plus"></i></span> Add Service</h4></Link>
-                        <Link to='/total-order-list' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-sort-amount-down-alt"></i></span> Total Order List</h4></Link>
+                        {
+                            accessAdmin &&
+                            <div>
+                                <Link to='/make-Admin' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-user-cog"></i></span> Make Admin</h4></Link>
+                                <Link to='/manage-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fab fa-accusoft"></i></span> Manage Service</h4></Link>
+                                <Link to='/add-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="far fa-calendar-plus"></i></span> Add Service</h4></Link>
+                                <Link to='/total-order-list' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-sort-amount-down-alt"></i></span> Total Order List</h4></Link>
+                            </div>
+                        }
                         <Link to='/my-booking' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-list-ul"></i></span> My Booking List</h4></Link>
                         <Link to='/My-Blog-And-Project' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-clipboard-list"></i></span> Blogs & Project</h4></Link>
                         <Link to='/review' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-star-half-alt"></i></span> Review</h4></Link>
@@ -127,10 +136,15 @@ const Sidebar = () => {
                     <h3 onClick={toggleSidebar} className="close-btn-sidebar"><i class="far fa-times-circle"></i></h3>
                     <div className="main-lnk">
                         <Link to='/home' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-home"></i></span> Back To Home</h4></Link>
-                        <Link to='/make-Admin' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-user-cog"></i></span> Make Admin</h4></Link>
-                        <Link to='/manage-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fab fa-accusoft"></i></span> Manage Service</h4></Link>
-                        <Link to='/add-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="far fa-calendar-plus"></i></span> Add Service</h4></Link>
-                        <Link to='/total-order-list' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-sort-amount-down-alt"></i></span> Total Order List</h4></Link>
+                        {
+                            accessAdmin &&
+                            <div>
+                                <Link to='/make-Admin' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-user-cog"></i></span> Make Admin</h4></Link>
+                                <Link to='/manage-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fab fa-accusoft"></i></span> Manage Service</h4></Link>
+                                <Link to='/add-service' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="far fa-calendar-plus"></i></span> Add Service</h4></Link>
+                                <Link to='/total-order-list' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-sort-amount-down-alt"></i></span> Total Order List</h4></Link>
+                            </div>
+                        }
                         <Link to='/my-booking' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-list-ul"></i></span> My Booking List</h4></Link>
                         <Link to='/My-Blog-And-Project' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-clipboard-list"></i></span> Blogs & Project</h4></Link>
                         <Link to='/review' Class="cstm-lnk-dsg-sidebar nav-link"><h4><span><i class="fas fa-star-half-alt"></i></span> Review</h4></Link>

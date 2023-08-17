@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 
 
 const DisplyService = (props) => {
-    const { ServiceImage, postId, id, name, ServiceName, ShortDisCription, body, website, allServices } = props.data;
+    const { serviceImage, postId, _id, name, ServiceTittle, Discription, body, website, lisOfServices } = props.data;
     const history = useHistory();
     const handlePushSingleService = (sID) => {
         history.push(`/ServiceDetail/${sID}`)
@@ -18,16 +18,18 @@ const DisplyService = (props) => {
             <div className="service-crd-dsgn">
                 <div className="srvc-box">
                     <div className="srvc-img-nme d-flex align-items-center justify-content-center mb-3">
-                        <img className="pb-2" src={ServiceImage} alt="" />
-                        <h4 className="pb-2">{ServiceName}</h4>
+                        <div className="srvs_img_cstm_box">
+                            <img className="pb-2" src={serviceImage} alt="" />
+                        </div>
+                        <h4 className="pb-2">{ServiceTittle}</h4>
                     </div>
                     {/* <p className="text-center mb-2">{ShortDisCription}</p> */}
                     {
-                        allServices.map(allFD => <h6><FontAwesomeIcon style={{ color: '#00c000' }} icon={faCheck} /> {allFD.topic}</h6>)
+                        lisOfServices.map(allFD => <h6><FontAwesomeIcon style={{ color: '#00c000' }} icon={faCheck} /> {allFD.Service}</h6>)
                     }
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <div className="cstm-glow-btn">
-                            <button onClick={() => handlePushSingleService(id)} className="srvc-deal-btn">Booking Now</button>
+                            <button onClick={() => handlePushSingleService(_id)} className="srvc-deal-btn">Booking Now</button>
                         </div>
                     </div>
                 </div>

@@ -15,6 +15,9 @@
     color: #0a0d13;
 }
 #detailServiceName-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 3px solid #cc4831;
     padding: 5px 30px;
     color: #c0c0c0;
@@ -23,8 +26,17 @@
 }
 
 .detail-srvs-img {
-    width: 55px;
-    padding-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 65px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.detail-srvs-img img{
+    width: 100%;
 }
 
 .content-details-services {

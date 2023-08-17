@@ -11,10 +11,18 @@
     justify-content: space-between;
     align-items: center;
 }
-
-.wrp-m-bkng .img-tttl-myBkng img {
+.mbookingspecific {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 55px;
-    margin-right: 5px;
+    height: 55px;
+    border-radius: 55px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.mbookingspecific img{
+    width: 100%;
 }
 
 /* booking status buttoncolour */

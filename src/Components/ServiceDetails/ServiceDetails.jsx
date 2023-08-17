@@ -5,23 +5,24 @@ import { useParams } from 'react-router-dom'; import { FontAwesomeIcon } from '@
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { Button, Modal } from 'react-bootstrap';
 import swal from 'sweetalert';
-import { PageTheme } from '../../App';
+import { AuthUser, PageTheme } from '../../App';
 import SimpleNavBar from '../SimplaeNavBar/SimplaeNavBar';
 
 
 
 const ServiceDetails = () => {
+
     const { Sid } = useParams();
     const [navbar, setNavbar] = useState(false);
     const [show, setShow] = useState(false);
-    const [allCountry, setAllCountry] = useState([])
-    const [singleData, setSingleData] = useState({})
-    const [forMapSingleData, setForMapSingleData] = useState([])
-    const { id, ServiceName, ServiceImage, ShortDisCription, } = singleData;
-    const [clientName, setClientName] = useState('')
-    const [clientEmail, setClientEmail] = useState('')
-    const [clientWhatsAppNmbr, setClientWhatsAppNmbr] = useState('')
-    const [countryName, setCountryName] = useState('')
+    const [allCountry, setAllCountry] = useState([]);
+    const [singleData, setSingleData] = useState({});
+    const [forMapSingleData, setForMapSingleData] = useState([]);
+    const { _id, ServiceTittle, serviceImage, Discription, } = singleData;
+    const [clientName, setClientName] = useState('');
+    const [clientEmail, setClientEmail] = useState('');
+    const [clientWhatsAppNmbr, setClientWhatsAppNmbr] = useState('');
+    const [countryName, setCountryName] = useState('');
     const [mainTheme, setMainTheme] = useContext(PageTheme);
     const [lightOrDark, setLightOrDark] = useState(null);
     useEffect(() => {
@@ -39,13 +40,15 @@ const ServiceDetails = () => {
         }
         else {
             const clientData = {
-                serviceID: id.toString(),
-                serviceName: ServiceName,
+                serviceID: _id.toString(),
+                serviceName: ServiceTittle,
                 clientName: clientName,
                 clientEmail: clientEmail,
                 clientWhatsAppNmbr: clientWhatsAppNmbr,
                 clientCountry: countryName,
-                serviceImage: ServiceImage,
+                serviceImage: serviceImage,
+                lisOfServices: forMapSingleData,
+                Discription: Discription,
                 status: 'Pending'
             }
             fetch('https://portfolio-server-fawn.vercel.app/newClientBoking', {
@@ -71,12 +74,18 @@ const ServiceDetails = () => {
     }
 
     useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('diersu'));
         fetch('https://laravel-world.com/api/countries')
             .then(res => res.json())
             .then(country => setAllCountry(country.data))
-        const findedData = SingleServiceData.find(data2 => data2.id === parseInt(Sid));
-        setSingleData(findedData);
-        setForMapSingleData(findedData.allServices)
+
+            fetch(`https://portfolio-server-fawn.vercel.app/detailSingleService/${Sid}`)
+            .then(res => res.json())
+            .then(sdata =>{
+                setSingleData(sdata);
+                setForMapSingleData(sdata.lisOfServices)
+            })
+        
     }, [])
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -86,15 +95,15 @@ const ServiceDetails = () => {
             <div id='main-Service-details-pg' >
                 <SimpleNavBar></SimpleNavBar>
                 <div className="ServiceDetail-Content">
-                    <h1 id='detailServiceName-img'><img className='detail-srvs-img' src={ServiceImage} alt="" /> {ServiceName}</h1>
+                    <h1 id='detailServiceName-img'> <div className='detail-srvs-img'><img  src={serviceImage} alt="" /> </div> {ServiceTittle}</h1>
                     <div className="content-details-services">
                         <div className="all-topic-details-srvs">
                             {
-                                forMapSingleData.map(data => <p><FontAwesomeIcon style={{ color: '#cc4831' }} icon={faAngleRight} /> {data.topic}</p>)
+                                forMapSingleData.map(data => <p><FontAwesomeIcon style={{ color: '#cc4831' }} icon={faAngleRight} /> {data.Service}</p>)
                             }
                         </div>
                         <div className="detail-service-description">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique hic, culpa iusto nostrum tempore quam quae doloremque, labore eos cum cumque modi officiis veritatis corrupti, ipsam blanditiis! Inventore provident dignissimos quos totam ut labore odio, mollitia corrupti dolor aperiam dolore non voluptatum libero voluptas odit a itaque ipsa deleniti iusto est voluptate porro? Et explicabo dolor dolorem? Incidunt nisi, id soluta ducimus optio necessitatibus, autem libero quae exercitationem blanditiis tenetur eaque architecto unde sequi culpa magni delectus tempore ipsam voluptatibus hic? Iste amet dolorem unde? Veritatis, facere, voluptates aliquam perferendis magni itaque ratione deleniti sint expedita accusantium temporibus! Velit quod atque quo odit accusantium libero labore soluta quibusdam! Ipsam repellat, cumque beatae dicta architecto itaque at modi ducimus, cum, commodi expedita enim? Tenetur ipsum tempora magni dolorem, possimus in quod ut dolores voluptatibus facere sit necessitatibus quia cum nobis dignissimos consectetur error eius exercitationem corrupti doloribus aliquam adipisci! Corrupti expedita modi fuga ullam hic delectus maiores, sunt sed corporis illo maxime, ipsum optio animi aliquam voluptatibus. Placeat a, minima quae cumque quia velit esse culpa voluptatem vitae vel quidem temporibus nemo sapiente eaque. Aliquam tenetur earum, assumenda doloribus voluptatem provident libero. Voluptatem soluta dolore commodi pariatur beatae, minus dicta eos.</p>
+                            <p>{singleData.Discription}</p>
                         </div>
                     </div>
                     <div className="Modal-boking-service">
@@ -109,7 +118,7 @@ const ServiceDetails = () => {
                                 <form onSubmit={handleConfirmBooking} action="" autocomplete="off" style={{ paddingBottom: '20px' }}>
                                     <div className="srvs-dtl-bkng-frm">
                                         <h5>Service Name</h5>
-                                        <input type="text" readOnly value={'->' + ServiceName} />
+                                        <input type="text" readOnly value={'->' + singleData.ServiceTittle} />
                                     </div>
                                     <div className="dtl-srvc-booking-form-input-data">
                                         <input onChange={(e) => setClientName(e.target.value)} value={clientName} type="text" required name="Name" />
@@ -117,8 +126,9 @@ const ServiceDetails = () => {
                                         <div className="underline-dtl-srvc-booking-form"></div>
                                     </div>
                                     <div className="dtl-srvc-booking-form-input-data">
-                                        <input onChange={(e) => setClientEmail(e.target.value)} value={clientEmail} type='email' required name="Email" />
-                                        <span>Email</span>
+                                        <input onChange={(e) => setClientEmail(e.target.value)} 
+                                        value={clientEmail}    type='email' required name="Email" />
+                                        <span >[ use valid email ]</span>
                                         <div className="underline-dtl-srvc-booking-form"></div>
                                     </div>
                                     <div className="dtl-srvc-booking-form-input-data">

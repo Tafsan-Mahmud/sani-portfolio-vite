@@ -10,9 +10,9 @@ const MainService = () => {
     const [mainTheme, setMainTheme]=useContext(PageTheme);
     const [lightOrDark, setLightOrDark]= useState(null);
     const [allServiceData, setAllServiceData] = useState([]);
-    const suffleData =  fakedata.sort(()=>Math.random() - 0.5 )
+    const suffleData =  allServiceData.sort(()=>Math.random() - 0.5 )
     useEffect(() => {
-        fetch(fakedata)
+        fetch('https://portfolio-server-fawn.vercel.app/getAllService')
             .then(res => res.json())
             .then(data => setAllServiceData(data));
     const dlData = JSON.parse(localStorage.getItem('DLMode'));

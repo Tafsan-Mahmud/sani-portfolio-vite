@@ -43,10 +43,22 @@
 .srvc-box h6 {
     color: #afafaf;
 }
-.srvc-box img {
-    width: 40px;
-    margin-right: 5px;
+.srvs_img_cstm_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 55px;
+    overflow: hidden;
 }
+.srvs_img_cstm_box img {
+    width: 100%;
+}
+
+
 #itsLight .srvc-img-nme {
     border-bottom: 2px solid #252525;
 }
