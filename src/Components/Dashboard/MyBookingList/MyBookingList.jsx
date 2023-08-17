@@ -24,7 +24,11 @@ const MyBookingList = () => {
                 <h2 id="myBookingList-ttl-h1">My Booking List</h2>
                 <div className="card-container">
                     {
-                        specificData.reverse().map(data => <DisplyMyBooking data={data}></DisplyMyBooking>)
+                        specificData.length >= 1 ?
+                        specificData.reverse().map(data => <DisplyMyBooking data={data}></DisplyMyBooking>) :
+                        <div>
+                            <h2 style={{color:'whitesmoke'}}>You dont have any booking-[empty]!</h2>
+                        </div>
                     }
                 </div>
             </div>
