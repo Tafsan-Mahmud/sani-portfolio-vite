@@ -26,3 +26,11 @@
     margin-top: 50px;
     margin-bottom: 60px;
 }
+
+.spinnar_servicess{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}

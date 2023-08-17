@@ -1,6 +1,13 @@
 #itsLightmode #customer-review{
     background:#cad9e2;
 }
+.spinnar_review{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
 #customer-review{
     position: relative;

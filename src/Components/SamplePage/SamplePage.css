@@ -1,0 +1,13 @@
+.error_page{
+    background-color: #090b13;
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.error_page h1{
+    font-size: 40px;
+    color: red;
+}
+.error_page h2{
+    color: #ca0101;
+}

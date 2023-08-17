@@ -9,11 +9,18 @@
     background: #040e19;
     padding: 15px;
 }
-.img-name-tittle img{
-    max-width: 75px;
-    border-radius: 100%;
+.review_img_box{
+    width: 60px;
+    height: 60px;
+    display: flex;
     margin-right: 10px;
-    /* box-shadow: 5px 5px 10px gray; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    overflow: hidden;
+}
+.review_img_box img{
+   width: 100%;
 }
 
 .nm-ttl{
