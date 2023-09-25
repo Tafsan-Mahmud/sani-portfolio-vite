@@ -169,6 +169,14 @@
     border-bottom-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+.ftr-scl-mda-icn-dsg ul li:hover .sci-dsg-lnkdin{
+    overflow: hidden;
+    background:#0072b1 ;
+    color: #e7e7e7;
+    text-shadow: 2px 1px 3px #1b1b1b7a;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 .ftr-scl-mda-icn-dsg ul li:hover .sci-dsg-brws{
     overflow: hidden;
     background-color: red;

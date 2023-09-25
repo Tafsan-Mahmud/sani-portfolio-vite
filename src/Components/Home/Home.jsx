@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import homeMainPic from './IMG_4203-01 (1).jpg';
+import homeimg2 from './sani.jpg';
 import Typical from 'react-typical';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBullhorn, faDownload, faUser } from '@fortawesome/free-solid-svg-icons'
@@ -39,15 +40,21 @@ const Home = () => {
                         </div>
                         <div data-aos={animationRSP4 ? 'fade-up' : 'fade-left'} className="col-md-6 mb-4 d-flex justify-content-evenly align-items-center">
                             <div className="home-image">
-                                <img src={homeMainPic} alt="" />
+                                <img src={homeimg2} alt="" />
                             </div>
                             <div className="home-scl-mda-icn-dsg">
                                 <ul>
                                     <li><a className="sci-dsg-fb-h" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a className="sci-dsg-tw-h" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a className="sci-dsg-ig-h" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a className="sci-dsg-pt-h" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a className="sci-dsg-ytb-h" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-youtube"></i></a></li>
+
+                                    <li><a className="sci-dsg-tw-h" href="https://twitter.com/sani1288" target="_bold"><i class="fab fa-twitter"></i></a></li>
+
+                                    <li><a className="sci-dsg-ig-h" href="https://www.instagram.com/sani_seo_expert/" target="_bold"><i class="fab fa-instagram"></i></a></li>
+
+                                    <li><a className="sci-dsg-pt-h" href="https://www.pinterest.com/sani1288/" target="_bold"><i class="fab fa-pinterest-p"></i></a></li>
+
+                                    <li><a className="sci-dsg-lnkdin-h" href="https://www.linkedin.com/in/mdsanihossain/" target="_bold"><i class="fab fa-linkedin-in"></i></a></li>
+
+                                    <li><a className="sci-dsg-ytb-h" href="https://www.youtube.com/@md.sanihossain3189/featured" target="_bold"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>

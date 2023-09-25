@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const [animationRSP8, setAnimationRSP8] = useState(false);
-    useEffect(()=>{
+    useEffect(() => {
         if (window.innerWidth < 988) {
             setAnimationRSP8(true)
         }
-    },[animationRSP8]);
+    }, [animationRSP8]);
     return (
         <div id="Footer" className="pt-5">
             <div className="container">
@@ -21,10 +21,11 @@ const Footer = () => {
                             <h5>Social Media</h5>
                             <ul>
                                 <li><a className="sci-dsg-fb" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a className="sci-dsg-tw" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-twitter"></i></a></li>
-                                <li><a className="sci-dsg-ig" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-instagram"></i></a></li>
-                                <li><a className="sci-dsg-pt" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a className="sci-dsg-ytb" href="https://www.facebook.com/sani1288" target="_bold"><i class="fab fa-youtube"></i></a></li>
+                                <li><a className="sci-dsg-tw" href="https://twitter.com/sani1288" target="_bold"><i class="fab fa-twitter"></i></a></li>
+                                <li><a className="sci-dsg-ig" href="https://www.instagram.com/sani_seo_expert/" target="_bold"><i class="fab fa-instagram"></i></a></li>
+                                <li><a className="sci-dsg-pt" href="https://www.pinterest.com/sani1288/" target="_bold"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a className="sci-dsg-lnkdin" href="https://www.linkedin.com/in/mdsanihossain/" target="_bold"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a className="sci-dsg-ytb" href="https://www.youtube.com/@md.sanihossain3189/featured" target="_bold"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -44,20 +45,20 @@ const Footer = () => {
                         <div className="lctn-nmbr-mail">
                             <div className="icon">
                                 <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <p>834 Manda street <br /> New Yourk,FQ 27102 <br /> USA</p>
+                            </div>   
+                            <p> Tejgaon, Road N-17, <br /> House N-83, Block-B, <br /> 1215/Dhaka, Bangladesh.</p>
                         </div>
                         <div className="lctn-nmbr-mail">
                             <div className="icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
-                            <p>+8801876511805 <br />+8801876511805</p>
+                            <p> +8801784544188 <br /> +8801848631206 </p>
                         </div>
                         <div className="lctn-nmbr-mail">
                             <div className="icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <p className="lctn-nmbr-mail ml-btm-xtra"> mdsanihossain@gmail.com</p>
+                            <p className="lctn-nmbr-mail ml-btm-xtra"> mdsanihossain73@gmail.com</p>
                         </div>
                     </div>
 
@@ -71,7 +72,7 @@ const Footer = () => {
                             </div>
                             <p>Design and Developed by.</p>
                         </div>
-                        
+
                         <div className="developer_info_main">
                             <div className="developer_img_name_tittl">
                                 <div className="dev_img_only">
@@ -83,7 +84,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="dev_contact_main">
-                                    {/* <h6 id='dev_contact'>Contact</h6> */}
+                                {/* <h6 id='dev_contact'>Contact</h6> */}
                                 <div className="dev_social ftr-scl-mda-icn-dsg">
                                     <ul>
                                         <li><a className="sci-dsg-brws" href="https://tafsan-mahmud.web.app" target="_bold"><i class="fab fa-firefox"></i></a></li>
@@ -94,13 +95,13 @@ const Footer = () => {
                         </div>
                         <div className="dev_icon_main2">
                             <div className="dev_icon">
-                                 <i class="fas fa-envelope"></i>
+                                <i class="fas fa-envelope"></i>
                             </div>
-                                <p>tafsanmahmudnobin090@gmail.com</p>
+                            <p>tafsanmahmudnobin090@gmail.com</p>
                         </div>
                     </div>
 
-                     {/* developer Information */}
+                    {/* developer Information */}
 
                     <p className="copyright-p">
                         Copyright @ {(new Date().getFullYear())} | MD.Sani Hossain All Rights Reserved.

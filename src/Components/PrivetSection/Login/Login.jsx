@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Toast from 'react-bootstrap/Toast';
 import './Login.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { app } from '../../firebase/firebase.init';
 import swal from 'sweetalert';
 import { AuthUser } from '../../../App';
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -27,11 +29,12 @@ const Login = () => {
     const [toggleInUpBtn, setToggleInUpBtn] = useState(false)
     const [err, setErr] = useState('')
     const [regName, setRegName] = useState('')
-    const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('');
+    const [email, setEmail] = useState('adminexample@gmail.com')
+    const [pass, setPass] = useState('123456789');
     const [regEmail, setRegEmail] = useState('')
     const [regPass, setRegPass] = useState('');
     const [regPassConfirm, setRegPassConfirm] = useState('');
+    const [tost, setTost] = useState(true);
     // const [trigger, setTrigger] = useState(false);
     // console.log(toggleInUpBtn)
 
@@ -40,7 +43,14 @@ const Login = () => {
     //     localStorage.setItem('diersu', JSON.stringify(false));
     //     // setAuthUser(user);
     // }, []);
-
+    if (tost) {
+        swal({
+            title: "Working!",
+            text: "Use the example email or password for dashboard access. NOTE( please do not use it for bad purposes)",
+            icon: "warning",
+            button: true,
+        })
+    }
 
     const handletoggleSlider = () => {
         setToggleInUpBtn(!toggleInUpBtn);
@@ -65,7 +75,7 @@ const Login = () => {
             })
 
     }
-    const handleFacebookSigninPopup = ()=>{
+    const handleFacebookSigninPopup = () => {
         swal({
             title: "Working Progress",
             text: "this feature coming soon. you can sign in with [GOOGLE]",
@@ -146,7 +156,22 @@ const Login = () => {
             <div className="home-btn-login-cmpnt">
                 <Link to="/home"><button><i class="fas fa-home"></i> Home</button></Link>
             </div>
+
+            <div id='login_example_toast'>
+                <div id='tost_content'>
+                    <Toast onClose={() => setTost(false)} show={tost}>
+                        <Toast.Header>
+                            <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                            <strong className="me-auto">Admin Panel</strong>
+                            <small>34 Second ago</small>
+                        </Toast.Header>
+                        <Toast.Body><span className='text-danger'>Use the example email or password for dashboard access. NOTE( please do not use it for bad purposes)</span></Toast.Body>
+                    </Toast>
+                </div>
+
+            </div>
             <div className={toggleInUpBtn ? "login-cont s-signUp" : "login-cont "} >
+
                 <div className="login-form sign-in-lgn">
                     <form action="" onSubmit={handleSigninWithEmailAndPass}>
                         <h2>Sign In</h2>

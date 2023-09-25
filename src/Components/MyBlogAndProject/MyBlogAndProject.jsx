@@ -41,7 +41,7 @@ const MyBlogAndProject = () => {
                 {
                     tabsVal === 2 && <div className="wrp-all-card ">
                     {
-                        fakeData.map(data => <DisplayMyProject key={data.id} data={data}></DisplayMyProject>)
+                        fakeData2.map(data => <DisplayMyProject key={data.id} data={data}></DisplayMyProject>)
                     }
                 </div>
                 }
