@@ -57,7 +57,7 @@ const Sidebar = () => {
 
 
 
-    const exampleImg = `https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png`;
+    const exampleImg = `https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-businessman-avatar-icon-flat-style-png-image_1917273.jpg`;
 
     // const removeNameEnd = usersName.split(' ').slice(0, 2).join(' ');
 
