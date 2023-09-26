@@ -10,7 +10,6 @@ const NavBar = () => {
     const [mainTheme, setMainTheme] = useContext(PageTheme);
     const [lightOrDark, setLightOrDark] = useState(null);
     const [isLogedIn, setIsLogedIn] = useState(false);
-    console.log(isLogedIn)
     useEffect(()=>{
         const dldata = JSON.parse(localStorage.getItem('DLMode'));
         setIsLogedIn(JSON.parse(localStorage.getItem('diersu')));

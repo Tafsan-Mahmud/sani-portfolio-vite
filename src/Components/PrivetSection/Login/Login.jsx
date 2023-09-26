@@ -177,11 +177,11 @@ const Login = () => {
                         <h2>Sign In</h2>
                         <label htmlFor="">
                             <span>Email Address</span>
-                            <input onChange={(e) => setEmail(e.target.value)} value={email} required type="email" name="" id="" />
+                            <input onChange={(e) => setEmail(e.target.value)} value={email} required type="email" name="" />
                         </label>
                         <label htmlFor="">
                             <span>Password</span>
-                            <input required onChange={(e) => setPass(e.target.value)} value={pass} type="password" name="" id="" />
+                            <input required onChange={(e) => setPass(e.target.value)} value={pass} type="password" name="" />
                         </label>
                         <p className='text-danger text-center'>{err}</p>
                         <button className="login-sign-in-submit" type='submit'> sign in</button>
