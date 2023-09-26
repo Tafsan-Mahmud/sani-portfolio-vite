@@ -10,11 +10,10 @@ const MyBookingList = () => {
 
     useEffect(()=>{
         const user = JSON.parse(localStorage.getItem('diersu'));
-        fetch(`https://portfolio-server-fawn.vercel.app/specificBooking/${user.marlin}`)
+        fetch(`https://portfolio-server-fawn.vercel.app/specificBookings?email=${user.marlin}`)
         .then(res => res.json())
         .then(data =>{
             setSpecificData(data);
-            console.log(data);
         });
     },[])
     return (
