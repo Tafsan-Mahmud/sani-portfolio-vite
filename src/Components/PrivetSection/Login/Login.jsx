@@ -34,7 +34,7 @@ const Login = () => {
     const [regEmail, setRegEmail] = useState('')
     const [regPass, setRegPass] = useState('');
     const [regPassConfirm, setRegPassConfirm] = useState('');
-    const [tost, setTost] = useState(true);
+    // const [tost, setTost] = useState(true);
     // const [trigger, setTrigger] = useState(false);
     // console.log(toggleInUpBtn)
 
@@ -157,8 +157,8 @@ const Login = () => {
                 <Link to="/home"><button><i class="fas fa-home"></i> Home</button></Link>
             </div>
 
-            <div id='login_example_toast'>
-                {/* <div id='tost_content'>
+            {/* <div id='login_example_toast'>
+                <div id='tost_content'>
                     <Toast onClose={() => setTost(false)} show={tost}>
                         <Toast.Header>
                             <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
@@ -167,8 +167,8 @@ const Login = () => {
                         </Toast.Header>
                         <Toast.Body><span className='text-danger'>Use the example email or password for dashboard access. NOTE( please do not use it for bad purposes)</span></Toast.Body>
                     </Toast>
-                </div> */}
-            </div>
+                </div>
+            </div> */}
             <div className={toggleInUpBtn ? "login-cont s-signUp" : "login-cont "} >
                 <div className="login-form sign-in-lgn">
                     <form action="" onSubmit={handleSigninWithEmailAndPass}>
