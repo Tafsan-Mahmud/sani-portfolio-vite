@@ -29,13 +29,13 @@ const Login = () => {
     const [toggleInUpBtn, setToggleInUpBtn] = useState(false)
     const [err, setErr] = useState('')
     const [regName, setRegName] = useState('')
-    const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('');
+    const [email, setEmail] = useState('adminexample@gmail.com')
+    const [pass, setPass] = useState('123456789');
     const [regEmail, setRegEmail] = useState('')
     const [regPass, setRegPass] = useState('');
     const [regPassConfirm, setRegPassConfirm] = useState('');
-    // const [tost, setTost] = useState(true);
-    // const [trigger, setTrigger] = useState(false);
+    const [tost, setTost] = useState(true);
+    const [trigger, setTrigger] = useState(false);
     // console.log(toggleInUpBtn)
 
 
@@ -43,14 +43,14 @@ const Login = () => {
     //     localStorage.setItem('diersu', JSON.stringify(false));
     //     // setAuthUser(user);
     // }, []);
-    // if (tost) {
-    //     swal({
-    //         title: "Working!",
-    //         text: "Use the example email or password for dashboard access. NOTE( please do not use it for bad purposes)",
-    //         icon: "warning",
-    //         button: true,
-    //     })
-    // }
+    if (tost) {
+        swal({
+            title: "Working!",
+            text: "Use the example email or password for full access of Dashboard. NOTE( please do not use it for bad purposes)",
+            icon: "warning",
+            button: true,
+        })
+    }
 
     const handletoggleSlider = () => {
         setToggleInUpBtn(!toggleInUpBtn);
@@ -61,9 +61,11 @@ const Login = () => {
         setRegEmail('');
         setRegPass('');
         setRegPassConfirm('');
+        setTost(false);
     }
 
     const handleSignInWithPopup = () => {
+        setTost(false);
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 // console.log(user);
@@ -123,12 +125,13 @@ const Login = () => {
     }
     const handleSigninWithEmailAndPass = (e) => {
         e.preventDefault();
+        setTost(false);
         signInWithEmailAndPassword(auth, email, pass)
             .then(result => {
                 setErr('');
                 setEmail('');
                 setPass('');
-                // setTrigger(true);
+                setTost(false);
                 handlelocaldata(result.user, true);
             })
             .catch(err => {
@@ -157,7 +160,7 @@ const Login = () => {
                 <Link to="/home"><button><i class="fas fa-home"></i> Home</button></Link>
             </div>
 
-            {/* <div id='login_example_toast'>
+            <div id='login_example_toast'>
                 <div id='tost_content'>
                     <Toast onClose={() => setTost(false)} show={tost}>
                         <Toast.Header>
@@ -165,10 +168,10 @@ const Login = () => {
                             <strong className="me-auto">Admin Panel</strong>
                             <small>34 Second ago</small>
                         </Toast.Header>
-                        <Toast.Body><span className='text-danger'>Use the example email or password for dashboard access. NOTE( please do not use it for bad purposes)</span></Toast.Body>
+                        <Toast.Body><span className='text-danger'>Use the example email or password for full access of Dashboard. NOTE( please do not use it for bad purposes)</span></Toast.Body>
                     </Toast>
                 </div>
-            </div> */}
+            </div>
             <div className={toggleInUpBtn ? "login-cont s-signUp" : "login-cont "} >
                 <div className="login-form sign-in-lgn">
                     <form action="" onSubmit={handleSigninWithEmailAndPass}>
