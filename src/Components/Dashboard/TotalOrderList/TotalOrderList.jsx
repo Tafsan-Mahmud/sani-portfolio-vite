@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-bootstrap/Spinner';
 
-
 const TotalOrderList = () => {
 
 
@@ -30,6 +29,7 @@ const TotalOrderList = () => {
         })
             .then(res => {
                 if (res) {
+                    console.log(res);
                     toast.success("Status Change Successfully")
                 }
             })
@@ -50,9 +50,16 @@ const TotalOrderList = () => {
                     })
                         .then(res => {
                             if (res) {
-                                swal("Poof! Your imaginary file has been deleted!", {
-                                    icon: "success",
-                                });
+                                toast.success('Booking Deleted Successfully', {
+                                    position:"top-center",
+                                    autoClose: 4000,
+                                    hideProgressBar: false,
+                                    closeOnClick: true,
+                                    pauseOnHover: true,
+                                    draggable: true,
+                                    progress: undefined,
+                                    theme: "light",
+                                    });
                             }
                         })
                 } else {

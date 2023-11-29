@@ -36,8 +36,6 @@ const AddService = () => {
         setTodoFkDta(updateData);
     }
     const handleServiceImage = (value)=>{
-        // console.log(value);
-        console.log(value.target.files[0]);
         setPreview(URL.createObjectURL(value.target.files[0]))
         setForUpload(value.target.files[0])
     }

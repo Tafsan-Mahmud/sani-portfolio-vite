@@ -67,23 +67,26 @@ const DisplyManageService = (props) => {
             })
         })
         .then(res =>{
-            toast.success('Service Successfully updated', {
-                autoClose: 4000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                });
-            setShow(false);
-            setDisable(false)
-            setPreview(null)
-            setDescripton('');
-            setServiceName('')
-            setForUpload(null)
-            setServicImage(null);
-            setTodoArraydata([]);
+            if(res){
+                toast.success('Service Successfully updated', {
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
+                setShow(false);
+                setDisable(false)
+                setPreview(null)
+                setDescripton('');
+                setServiceName('')
+                setForUpload(null)
+                setServicImage(null);
+                setTodoArraydata([]);
+            }
+            
         })
     }
     const modalon = () => {
