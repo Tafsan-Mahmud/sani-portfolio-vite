@@ -23,8 +23,12 @@ const TotalOrderList = () => {
 
     const handleStatusChange = (status, id) => {
         fetch(`https://portfolio-server-fawn.vercel.app/changeStatus/${id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
             body: JSON.stringify({ status: status })
         })
             .then(res => {
@@ -51,7 +55,7 @@ const TotalOrderList = () => {
                         .then(res => {
                             if (res) {
                                 toast.success('Booking Deleted Successfully', {
-                                    position:"top-center",
+                                    position: "top-center",
                                     autoClose: 4000,
                                     hideProgressBar: false,
                                     closeOnClick: true,
@@ -59,7 +63,7 @@ const TotalOrderList = () => {
                                     draggable: true,
                                     progress: undefined,
                                     theme: "light",
-                                    });
+                                });
                             }
                         })
                 } else {

@@ -57,7 +57,7 @@ const DisplyManageService = (props) => {
     const handleUpadteService = (x) =>{
         x.preventDefault()
         fetch(`https://portfolio-server-fawn.vercel.app/updateService/${_id}`,{
-            method:'PUT',
+            method:'PATCH',
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify({
                 serviceImage:servicImage,
