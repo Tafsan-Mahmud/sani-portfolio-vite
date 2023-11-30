@@ -23,11 +23,9 @@ const TotalOrderList = () => {
 
     const handleStatusChange = (status, id) => {
         fetch(`https://portfolio-server-fawn.vercel.app/changeStatus/${id}`, {
-            method: 'PATCH',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify({ status: status })
         })
