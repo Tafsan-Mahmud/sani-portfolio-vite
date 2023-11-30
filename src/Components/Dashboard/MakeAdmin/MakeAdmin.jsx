@@ -12,7 +12,7 @@ const MakeAdmin = () => {
 
     const handleAdminStore = (e) =>{
       e.preventDefault();
-        fetch('https://portfolio-server-fawn.vercel.app/makeAdmin',{
+        fetch('https://portfolio-server-oi36.onrender.com/makeAdmin',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify({adminEmail: eamilData})

@@ -13,7 +13,7 @@ const ManageService = () => {
     const [allService, setAllService] = useState([]);
     const id = "6425e44e00abd366a2233899"
     useEffect(()=>{
-        fetch(`https://portfolio-server-fawn.vercel.app/getAllService`)
+        fetch(`https://portfolio-server-oi36.onrender.com/getAllService`)
         .then(res => res.json())
         .then(data =>{
             setAllService(data.reverse());

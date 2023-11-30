@@ -78,7 +78,7 @@ const Sidebar = () => {
             setHalfOrFullName(true)
         }
 
-        fetch('https://portfolio-server-fawn.vercel.app/isAdminHere', {
+        fetch('https://portfolio-server-oi36.onrender.com/isAdminHere', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ adminEmail: user.marlin })

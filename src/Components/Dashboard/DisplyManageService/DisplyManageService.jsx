@@ -56,7 +56,7 @@ const DisplyManageService = (props) => {
 
     const handleUpadteService = (x) =>{
         x.preventDefault()
-        fetch(`https://portfolio-server-fawn.vercel.app/updateService/${_id}`,{
+        fetch(`https://portfolio-server-oi36.onrender.com/updateService/${_id}`,{
             method:'PUT',
             headers:{ 'Content-Type': 'application/json' },
             body:JSON.stringify({
@@ -99,7 +99,7 @@ const DisplyManageService = (props) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`https://portfolio-server-fawn.vercel.app/deleteService/${_id}`,{
+                    fetch(`https://portfolio-server-oi36.onrender.com/deleteService/${_id}`,{
                         method:'DELETE'
                     })
                     .then(res =>{

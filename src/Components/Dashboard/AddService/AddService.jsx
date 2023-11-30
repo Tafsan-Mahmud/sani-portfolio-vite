@@ -73,7 +73,7 @@ const AddService = () => {
         Discription: srvsDiscription
     } 
         
-        fetch('https://portfolio-server-fawn.vercel.app/addNewService',{
+        fetch('https://portfolio-server-oi36.onrender.com/addNewService',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(allData)

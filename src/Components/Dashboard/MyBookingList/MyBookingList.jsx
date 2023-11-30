@@ -10,7 +10,7 @@ const MyBookingList = () => {
 
     useEffect(()=>{
         const user = JSON.parse(localStorage.getItem('diersu'));
-        fetch(`https://portfolio-server-fawn.vercel.app/specificBookings?email=${user.marlin}`)
+        fetch(`https://portfolio-server-oi36.onrender.com/specificBookings?email=${user.marlin}`)
         .then(res => res.json())
         .then(data =>{
             setSpecificData(data);

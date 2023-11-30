@@ -108,7 +108,7 @@ const Review = () => {
                                 reviewerTittle:reviewerTittle,
                                 reviewerDESP:reviewerDESP
                             }
-                            fetch('https://portfolio-server-fawn.vercel.app/addNewReview',{
+                            fetch('https://portfolio-server-oi36.onrender.com/addNewReview',{
                                 method:'POST',
                                 headers:{ 'Content-Type': 'application/json' },
                                 body:JSON.stringify(alldata)
@@ -256,7 +256,7 @@ export default Review;
 //         reviewerTittle:reviewerTittle,
 //         reviewerDESP:reviewerDESP
 //     }
-//     fetch('https://portfolio-server-fawn.vercel.app/addNewReview',{
+//     fetch('https://portfolio-server-oi36.onrender.com/addNewReview',{
 //         method:'POST',
 //         headers:{ 'Content-Type': 'application/json' },
 //         body:JSON.stringify(alldata)

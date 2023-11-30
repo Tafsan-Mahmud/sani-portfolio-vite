@@ -51,7 +51,7 @@ const ServiceDetails = () => {
                 Discription: Discription,
                 status: 'Pending'
             }
-            fetch('https://portfolio-server-fawn.vercel.app/newClientBoking', {
+            fetch('https://portfolio-server-oi36.onrender.com/newClientBoking', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(clientData)
@@ -79,7 +79,7 @@ const ServiceDetails = () => {
             .then(res => res.json())
             .then(country => setAllCountry(country.data))
 
-            fetch(`https://portfolio-server-fawn.vercel.app/detailSingleService/${Sid}`)
+            fetch(`https://portfolio-server-oi36.onrender.com/detailSingleService/${Sid}`)
             .then(res => res.json())
             .then(sdata =>{
                 setSingleData(sdata);

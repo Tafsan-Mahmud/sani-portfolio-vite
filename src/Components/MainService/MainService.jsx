@@ -13,7 +13,7 @@ const MainService = () => {
     const [allServiceData, setAllServiceData] = useState([]);
     const suffleData = allServiceData.sort(() => Math.random() - 0.5)
     useEffect(() => {
-        fetch('https://portfolio-server-fawn.vercel.app/getAllService')
+        fetch('https://portfolio-server-oi36.onrender.com/getAllService')
             .then(res => res.json())
             .then(data => setAllServiceData(data));
         const dlData = JSON.parse(localStorage.getItem('DLMode'));

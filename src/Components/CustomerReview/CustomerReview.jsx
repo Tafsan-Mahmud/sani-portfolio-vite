@@ -21,7 +21,7 @@ const CustomerReview = () => {
     const [reviewdata, setReviewData] = useState([]);
 
     useEffect(() => {
-        fetch('https://portfolio-server-fawn.vercel.app/getAllReviewData')
+        fetch('https://portfolio-server-oi36.onrender.com/getAllReviewData')
             .then(res => res.json())
             .then(data => {
                 setReviewData(data);
